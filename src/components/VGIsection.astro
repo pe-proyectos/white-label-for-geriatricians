@@ -1,0 +1,193 @@
+---
+import VGIcard from "../components/VGIcard.astro";
+---
+
+<section id="vgi" class="py-20 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-12">
+            <h2 class="text-3xl font-bold text-gray-900 mb-4">
+                Valoración Geriátrica <span class="text-navy">Integral</span> (VGI)
+            </h2>
+            <div class="h-1 w-20 bg-navy mx-auto mb-6"></div>
+            <p class="text-lg text-gray-600 max-w-3xl mx-auto">
+                Evaluación multidimensional integral que considera variables
+                clínicas, funcionales, cognitivas, emocionales y sociales
+            </p>
+        </div>
+
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
+            <VGIcard
+                title="1. DUVANCINI CHIMPANSINI"
+                details={["• primera linea", "• segunda linea"]}
+                icon="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"
+                colorFrom="blue-50"
+                colorTo="white"
+            />
+
+            <div
+                class="bg-gradient-to-br from-green-50 to-white p-6 rounded-xl shadow-md"
+            >
+                <div
+                    class="w-12 h-12 bg-navy rounded-lg flex items-center justify-center mb-4"
+                >
+                    <svg
+                        class="w-6 h-6 text-white"
+                        fill="none"
+                        stroke="currentColor"
+                        viewBox="0 0 24 24"
+                    >
+                        <path
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                            d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"
+                        ></path>
+                    </svg>
+                </div>
+                <h3 class="text-lg font-bold text-navy mb-3">
+                    2. Valoración Mental
+                </h3>
+                <ul class="text-gray-700 text-sm space-y-1">
+                    <li>• Test del Reloj, Escala de Pfeiffer</li>
+                    <li>• Mini Mental, TEST DE MOCA</li>
+                    <li>• Normal a Demencia</li>
+                </ul>
+            </div>
+
+            <div
+                class="bg-gradient-to-br from-purple-50 to-white p-6 rounded-xl shadow-md"
+            >
+                <div
+                    class="w-12 h-12 bg-navy rounded-lg flex items-center justify-center mb-4"
+                >
+                    <svg
+                        class="w-6 h-6 text-white"
+                        fill="none"
+                        stroke="currentColor"
+                        viewBox="0 0 24 24"
+                    >
+                        <path
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                            d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"
+                        ></path>
+                    </svg>
+                </div>
+                <h3 class="text-lg font-bold text-navy mb-3">
+                    3. Valoración Social
+                </h3>
+                <ul class="text-gray-700 text-sm space-y-1">
+                    <li>• Red de apoyo familiar</li>
+                    <li>• Recursos sociales</li>
+                    <li>• Ambiente domiciliario</li>
+                </ul>
+            </div>
+
+            <div
+                class="bg-gradient-to-br from-orange-50 to-white p-6 rounded-xl shadow-md"
+            >
+                <div
+                    class="w-12 h-12 bg-navy rounded-lg flex items-center justify-center mb-4"
+                >
+                    <svg
+                        class="w-6 h-6 text-white"
+                        fill="none"
+                        stroke="currentColor"
+                        viewBox="0 0 24 24"
+                    >
+                        <path
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                            d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"
+                        ></path>
+                    </svg>
+                </div>
+                <h3 class="text-lg font-bold text-navy mb-3">
+                    4. Valoración Nutricional
+                </h3>
+                <ul class="text-gray-700 text-sm space-y-1">
+                    <li>• Mini Nutritional Assessment</li>
+                    <li>• Estado nutricional</li>
+                    <li>• Delgadez a Obesidad</li>
+                </ul>
+            </div>
+
+            <div
+                class="bg-gradient-to-br from-red-50 to-white p-6 rounded-xl shadow-md"
+            >
+                <div
+                    class="w-12 h-12 bg-navy rounded-lg flex items-center justify-center mb-4"
+                >
+                    <svg
+                        class="w-6 h-6 text-white"
+                        fill="none"
+                        stroke="currentColor"
+                        viewBox="0 0 24 24"
+                    >
+                        <path
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                            d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+                    </svg>
+                </div>
+                <h3 class="text-lg font-bold text-navy mb-3">
+                    5. Valoración de Fragilidad
+                </h3>
+                <ul class="text-gray-700 text-sm space-y-1">
+                    <li>• Escala de Frail, Fenotipo de Fried</li>
+                    <li>• Escala de Fragilidad Clínica (CFS)</li>
+                    <li>• Robusto, Pre-frágil, Frágil</li>
+                </ul>
+            </div>
+
+            <div
+                class="bg-gradient-to-br from-pink-50 to-white p-6 rounded-xl shadow-md"
+            >
+                <div
+                    class="w-12 h-12 bg-navy rounded-lg flex items-center justify-center mb-4"
+                >
+                    <svg
+                        class="w-6 h-6 text-white"
+                        fill="none"
+                        stroke="currentColor"
+                        viewBox="0 0 24 24"
+                    >
+                        <path
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                            d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"
+                        ></path>
+                    </svg>
+                </div>
+                <h3 class="text-lg font-bold text-navy mb-3">
+                    6. Valoración Afectiva
+                </h3>
+                <ul class="text-gray-700 text-sm space-y-1">
+                    <li>• Escala de Yesavage (Depresión)</li>
+                    <li>• Escala de Goldberg, Hamilton (Ansiedad)</li>
+                    <li>• Evaluación psicológica integral</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="bg-navy rounded-2xl p-8 text-white text-center">
+            <h3 class="text-2xl font-bold mb-4">
+                ¿Necesitas una Valoración Geriátrica Integral?
+            </h3>
+            <p class="mb-6 text-blue-100">
+                Obtén una evaluación completa y personalizada para optimizar tu
+                salud y calidad de vida
+            </p>
+            <a
+                href="#formulario"
+                class="bg-white text-navy px-8 py-3 rounded-full font-semibold hover:bg-gray-100 transition duration-300 inline-block"
+            >
+                Solicitar VGI
+            </a>
+        </div>
+    </div>
+</section>
