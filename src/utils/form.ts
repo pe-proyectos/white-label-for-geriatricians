@@ -21,7 +21,7 @@ document.getElementById("btn-enviar")?.addEventListener("click", function () {
         `Le agradecería confirmarme la disponibilidad para esta cita.%0A` +
         `Muchas gracias. 🙏`;
 
-    const numeroWhatsApp = "965417935";
+    const numeroWhatsApp = "";
     const url = `https://api.whatsapp.com/send?phone=${numeroWhatsApp}&text=${mensaje}`;
 
     window.open(url, "_blank");
