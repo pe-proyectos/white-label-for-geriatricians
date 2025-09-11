@@ -19,6 +19,7 @@
                         <label class="font-semibold text-sm text-gray-500"
                             >Nombres y Apellidos*<input
                                 type="text"
+                                id="inputNombre"
                                 placeholder="Ingresa el nombre completo del paciente"
                                 class="block w-full p-4 border border-gray-300 rounded-lg focus:border-navy focus:ring focus:ring-blue-200 transition duration-300"
                             /></label
@@ -29,6 +30,7 @@
                         <label class="font-semibold text-sm text-gray-500"
                             >DNI*<input
                                 type="text"
+                                id="inputDni"
                                 placeholder="123456789"
                                 class="block w-full p-4 border border-gray-300 rounded-lg focus:border-navy focus:ring focus:ring-blue-200 transition duration-300"
                             /></label
@@ -36,6 +38,7 @@
                         <label class="font-semibold text-sm text-gray-500"
                             >Edad<input
                                 type="text"
+                                id="inputEdad"
                                 placeholder="Edad del Paciente"
                                 class="block w-full p-4 border border-gray-300 rounded-lg focus:border-navy focus:ring focus:ring-blue-200 transition duration-300"
                             /></label
@@ -63,19 +66,26 @@
 
                         <label class="font-semibold text-sm text-gray-500"
                             >Tipo de Consulta*<select
-                                id="sede-select"
+                                id="consulta-select"
                                 class="w-full p-4 border border-gray-300 rounded-lg focus:border-navy focus:ring focus:ring-blue-200 transition duration-300"
                             >
                                 <option disabled="" selected=""
-                                    >Selecciona una sede</option
+                                    >Elige el tipo de consulta</option
                                 >
-                                <option>Jaén - Hospital General</option>
-                                <option>Bagua - Hospital de Apoyo</option>
-                                <option>Jaén - Clínica de la Solidaridad</option
+                                <option
+                                    >Valoración Geriátrica Integral (VGI)</option
                                 >
-                                <option>Jaén - Clínica San Juan</option>
-                                <option>Bagua - Clínica Interamericana</option>
-                                <option>Atención Domiciliaria</option>
+                                <option>Evaluación de Fragilidad</option>
+                                <option>Deterioro Cognitivo/Demencia</option>
+                                <option>Prevención de Caídas</option>
+                                <option
+                                    >Revisión de Medicamentos (Polifarmacia)</option
+                                >
+                                <option>Manejo del Dolor</option>
+                                <option>Cuidados Paliativos</option>
+                                <option>Consulta de Control</option>
+                                <option>Primera Vez</option>
+                                <option>Emergencia Geriátrica</option>
                             </select></label
                         >
                     </div>
@@ -85,6 +95,7 @@
                         >
                         <textarea
                             placeholder="Describe brevemente los síntomas, condiciones o motivos de la consulta geriatrica"
+                            id="consulta-adicional"
                             class="w-full p-4 border border-gray-300 rounded-lg focus:border-navy focus:ring focus:ring-blue-200 transition duration-300 resize-none"
                         ></textarea>
                     </div>
@@ -116,10 +127,14 @@
                 </div>
             </div>
             <div class="bg-white/10 text-gray-900 p-8 rounded-2xl shadow-xl">
-                <h3 class="text-2xl font-bold mb-6 text-white">Información de Contacto</h3>
+                <h3 class="text-2xl font-bold mb-6 text-white">
+                    Información de Contacto
+                </h3>
                 <div class="space-y-6">
                     <div class="flex items-start gap-4">
-                        <div class="w-12 h-12 bg-white/20 rounded-lg flex items-center justify-center flex-shrink-0">
+                        <div
+                            class="w-12 h-12 bg-white/20 rounded-lg flex items-center justify-center flex-shrink-0"
+                        >
                             <svg
                                 class="w-6 h-6 text-gray-800 dark:text-white"
                                 aria-hidden="true"
@@ -137,7 +152,9 @@
                             </svg>
                         </div>
                         <div>
-                            <h4 class="text-xl font-semibold mb-2 text-white">Atención especializada</h4>
+                            <h4 class="text-xl font-semibold mb-2 text-white">
+                                Atención especializada
+                            </h4>
                             <p class="text-blue-100">
                                 Valoración integral del adulto mayor con enfoque
                                 multidisciplinario y personalizado
@@ -145,7 +162,9 @@
                         </div>
                     </div>
                     <div class="flex items-start gap-4">
-                        <div class="w-12 h-12 bg-white/20 rounded-lg flex items-center justify-center flex-shrink-0">
+                        <div
+                            class="w-12 h-12 bg-white/20 rounded-lg flex items-center justify-center flex-shrink-0"
+                        >
                             <svg
                                 class="w-6 h-6 text-gray-800 dark:text-white"
                                 aria-hidden="true"
@@ -163,7 +182,9 @@
                             </svg>
                         </div>
                         <div>
-                            <h4 class="text-xl font-semibold mb-2 text-white">Consulta Domiciliaria</h4>
+                            <h4 class="text-xl font-semibold mb-2 text-white">
+                                Consulta Domiciliaria
+                            </h4>
                             <p class="text-blue-100">
                                 Atención geriátrica en la comodidad y seguridad
                                 del hogar
@@ -171,7 +192,9 @@
                         </div>
                     </div>
                     <div class="flex items-start gap-4">
-                        <div class="w-12 h-12 bg-white/20 rounded-lg flex items-center justify-center flex-shrink-0">
+                        <div
+                            class="w-12 h-12 bg-white/20 rounded-lg flex items-center justify-center flex-shrink-0"
+                        >
                             <svg
                                 class="w-6 h-6 text-gray-800 dark:text-white"
                                 aria-hidden="true"
@@ -189,7 +212,9 @@
                             </svg>
                         </div>
                         <div>
-                            <h4 class="text-xl font-semibold mb-2 text-white">Horarios Flexibles</h4>
+                            <h4 class="text-xl font-semibold mb-2 text-white">
+                                Horarios Flexibles
+                            </h4>
                             <p class="text-blue-100">
                                 Adaptamos nuestros horarios a las necesidades
                                 del paciente y la familia
@@ -198,7 +223,9 @@
                     </div>
                 </div>
                 <div class="bg-white/20 p-6 rounded-xl mt-8">
-                    <h4 class="text-lg text-white font-semibold mb-4 flex items-center gap-2">
+                    <h4
+                        class="text-lg text-white font-semibold mb-4 flex items-center gap-2"
+                    >
                         <svg
                             class="w-5 h-5"
                             fill="none"
@@ -221,15 +248,21 @@
                     <div class="space-y-2">
                         <div class="flex items-center gap-3">
                             <div class="w-2 h-2 bg-white rounded-full"></div>
-                            <span class="text-sm text-white">Hospital General de Jaén, Cajamarca</span>
+                            <span class="text-sm text-white"
+                                >Hospital General de Jaén, Cajamarca</span
+                            >
                         </div>
                         <div class="flex items-center gap-3">
                             <div class="w-2 h-2 bg-white rounded-full"></div>
-                            <span class="text-sm text-white">Hospital de Apoyo Bagua, Amazonas</span>
+                            <span class="text-sm text-white"
+                                >Hospital de Apoyo Bagua, Amazonas</span
+                            >
                         </div>
                         <div class="flex items-center gap-3">
                             <div class="w-2 h-2 bg-white rounded-full"></div>
-                            <span class="text-sm text-white">15+ Clínicas especializadas</span>
+                            <span class="text-sm text-white"
+                                >15+ Clínicas especializadas</span
+                            >
                         </div>
                     </div>
                 </div>
@@ -237,3 +270,4 @@
         </div>
     </div>
 </section>
+<script src="/src/utils/form.ts"></script>
