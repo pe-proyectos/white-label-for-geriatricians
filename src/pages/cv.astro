@@ -4,40 +4,105 @@ import Layout from "../layouts/Layout.astro";
 // Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
 // Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
 ---
-
 <Layout>
-    <main>
-        <div>
-            <div>
+		<main class="max-w-4xl mx-auto py-40 px-4 sm:px-6 lg:px-8">
+			<!-- Encabezado del CV -->
+			<div class="bg-white rounded-2xl shadow-xl p-8 mb-8">
+				<div class="text-center mb-8">
+					<div
+						class="w-32 h-32 mx-auto mb-6 bg-gray-200 rounded-full overflow-hidden"
+					>
+						<img
+							src="/src/resources/img/cvprofile.png"
+							alt="Dr. Juan Andrés Jambo Mendoza"
+							class="w-full bg-blue-400 h-full object-cover"
+						/>
+					</div>
+					<h1 class="text-4xl font-bold text-gray-900 mb-2">
+						Dr. Juan Andrés Jambo Mendoza
+					<h1/>
+					<h2 class="text-2xl text-blue-200 font-bold mb-4">
+						Médico Especialista en Geriatría
+					</h2>
 
-            </div>
-            <h1></h1>
-            <h3></h3>
-            <div>
-                
-                <div>
+					<div
+						class="grid md:grid-cols-2 gap-4 text-left max-w-2xl mx-auto"
+					>
+						<div class="flex items-center gap-3">
+							<svg
+								class="w-5 h-5 text-navy"
+								fill="none"
+								stroke="currentColor"
+								viewBox="0 0 24 24"
+							>
+								<path
+									stroke-linecap="round"
+									stroke-linejoin="round"
+									stroke-width="2"
+									d="M10 6H5a2 2 0 00-2 2v9a2 2 0 002 2h14a2 2 0 002-2V8a2 2 0 00-2-2h-5m-4 0V5a2 2 0 114 0v1m-4 0a2 2 0 104 0m-5 8a2 2 0 100-4 2 2 0 000 4zm0 0c1.306 0 2.417.835 2.83 2M9 14a3.001 3.001 0 00-2.83 2M15 11h3m-3 4h2"
+								></path>
+							</svg>
+							<div>
+								<p class="font-semibold text-gray-700">CMP</p>
+								<p class="text-gray-600">081654</p>
+							</div>
+						</div>
+						<div class="flex items-center gap-3">
+							<svg
+								class="w-5 h-5 text-navy"
+								fill="none"
+								stroke="currentColor"
+								viewBox="0 0 24 24"
+							>
+								<path
+									stroke-linecap="round"
+									stroke-linejoin="round"
+									stroke-width="2"
+									d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"
+								></path>
+							</svg>
+							<div>
+								<p class="font-semibold text-gray-700">RNE</p>
+								<p class="text-gray-600">046847</p>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="mb-8">
+					<h3
+						class="text-2xl font-bold text-navy mb-4 border-b-2 border-gray-200 pb-2"
+					>
+						Perfil Profesional
+					</h3>
+					<p class="text-gray-700 leading-relaxed text-lg">
+						Médico Cirujano especializado en Geriatría con sólida
+						formación académica y más de 15 años de experiencia en
+						el campo de la medicina especializada en el Adulto Mayor
+						(60 años a más). Especialista en prevención, diagnóstico
+						temprano, tratamiento de múltiples enfermedades,
+						síndromes geriátricos y problemas funcionales,
+						cognitivos, emocionales y sociales de los pacientes
+						adultos mayores. Certificado en Cuidados Paliativos y
+						Manejo del Dolor, comprometido con lograr el máximo
+						nivel de autonomía e independencia en las personas
+						mayores.
+					</p>
+				</div>
 
-                </div>
-            </div>
-            <div>
-                
-                <div>
-
-                </div>
-            </div>
-            <div>
-                <h3></h3>
-                <p></p>
-            </div>
-            <div>
-                <h1>
-
-                </h1>
-                <p>
-
-                </p>
-            </div>
-        </div>
-        
-    </main>
-</Layout>
+				<!-- Objetivo Profesional -->
+				<div class="bg-blue-50 p-6 rounded-xl mb-8">
+					<h3 class="text-xl font-bold text-navy mb-3">
+						Objetivo Profesional
+					</h3>
+					<p class="text-gray-700 leading-relaxed">
+						Lograr el máximo nivel de autonomía e independencia en
+						las personas mayores, promoviendo un envejecimiento
+						saludable y de calidad a través de una atención
+						integral, multidisciplinaria y humanizada que preserve
+						la dignidad y mejore la calidad de vida de cada
+						paciente.
+					</p>
+				</div>
+			</div>
+		</main>
+	</Layout>
