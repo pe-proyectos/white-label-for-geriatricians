@@ -4,105 +4,310 @@ import Layout from "../layouts/Layout.astro";
 // Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
 // Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
 ---
+
 <Layout>
-		<main class="max-w-4xl mx-auto py-40 px-4 sm:px-6 lg:px-8">
-			<!-- Encabezado del CV -->
-			<div class="bg-white rounded-2xl shadow-xl p-8 mb-8">
-				<div class="text-center mb-8">
-					<div
-						class="w-32 h-32 mx-auto mb-6 bg-gray-200 rounded-full overflow-hidden"
-					>
-						<img
-							src="/src/resources/img/cvprofile.png"
-							alt="Dr. Juan Andrés Jambo Mendoza"
-							class="w-full bg-blue-400 h-full object-cover"
-						/>
-					</div>
-					<h1 class="text-4xl font-bold text-gray-900 mb-2">
-						Dr. Juan Andrés Jambo Mendoza
-					<h1/>
-					<h2 class="text-2xl text-blue-200 font-bold mb-4">
-						Médico Especialista en Geriatría
-					</h2>
+    <main class="max-w-4xl mx-auto py-40 px-4 sm:px-6 lg:px-8">
+        <div class="bg-gray-50 rounded-2xl shadow-xl p-8 mb-8">
+            <div class="text-center mb-8">
+                <div
+                    class="w-32 h-32 mx-auto mb-6 bg-gray-200 rounded-full overflow-hidden"
+                >
+                    <img
+                        src="/src/resources/img/cvprofile.png"
+                        alt="Dr. Juan Andrés Jambo Mendoza"
+                        class="w-full bg-blue-400 h-full object-cover"
+                    />
+                </div>
+                <h1 class="text-4xl font-bold text-gray-900 mb-2">
+                    Dr. Juan Andrés Jambo Mendoza
+                    <h1></h1>
+                    <h2 class="text-2xl text-blue-300 font-bold mb-4">
+                        Médico Especialista en Geriatría
+                    </h2>
 
-					<div
-						class="grid md:grid-cols-2 gap-4 text-left max-w-2xl mx-auto"
-					>
-						<div class="flex items-center gap-3">
-							<svg
-								class="w-5 h-5 text-navy"
-								fill="none"
-								stroke="currentColor"
-								viewBox="0 0 24 24"
-							>
-								<path
-									stroke-linecap="round"
-									stroke-linejoin="round"
-									stroke-width="2"
-									d="M10 6H5a2 2 0 00-2 2v9a2 2 0 002 2h14a2 2 0 002-2V8a2 2 0 00-2-2h-5m-4 0V5a2 2 0 114 0v1m-4 0a2 2 0 104 0m-5 8a2 2 0 100-4 2 2 0 000 4zm0 0c1.306 0 2.417.835 2.83 2M9 14a3.001 3.001 0 00-2.83 2M15 11h3m-3 4h2"
-								></path>
-							</svg>
-							<div>
-								<p class="font-semibold text-gray-700">CMP</p>
-								<p class="text-gray-600">081654</p>
-							</div>
-						</div>
-						<div class="flex items-center gap-3">
-							<svg
-								class="w-5 h-5 text-navy"
-								fill="none"
-								stroke="currentColor"
-								viewBox="0 0 24 24"
-							>
-								<path
-									stroke-linecap="round"
-									stroke-linejoin="round"
-									stroke-width="2"
-									d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"
-								></path>
-							</svg>
-							<div>
-								<p class="font-semibold text-gray-700">RNE</p>
-								<p class="text-gray-600">046847</p>
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="mb-8">
-					<h3
-						class="text-2xl font-bold text-navy mb-4 border-b-2 border-gray-200 pb-2"
-					>
-						Perfil Profesional
-					</h3>
-					<p class="text-gray-700 leading-relaxed text-lg">
-						Médico Cirujano especializado en Geriatría con sólida
-						formación académica y más de 15 años de experiencia en
-						el campo de la medicina especializada en el Adulto Mayor
-						(60 años a más). Especialista en prevención, diagnóstico
-						temprano, tratamiento de múltiples enfermedades,
-						síndromes geriátricos y problemas funcionales,
-						cognitivos, emocionales y sociales de los pacientes
-						adultos mayores. Certificado en Cuidados Paliativos y
-						Manejo del Dolor, comprometido con lograr el máximo
-						nivel de autonomía e independencia en las personas
-						mayores.
-					</p>
-				</div>
+                    <div
+                        class="grid md:grid-cols-2 gap-4 text-left max-w-2xl mx-auto"
+                    >
+                        <div class="flex items-center gap-3">
+                            <svg
+                                class="w-5 h-5 text-blue-400"
+                                fill="none"
+                                stroke="currentColor"
+                                viewBox="0 0 24 24"
+                                class=""
+                            >
+                                <path
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                    stroke-width="2"
+                                    d="M10 6H5a2 2 0 00-2 2v9a2 2 0 002 2h14a2 2 0 002-2V8a2 2 0 00-2-2h-5m-4 0V5a2 2 0 114 0v1m-4 0a2 2 0 104 0m-5 8a2 2 0 100-4 2 2 0 000 4zm0 0c1.306 0 2.417.835 2.83 2M9 14a3.001 3.001 0 00-2.83 2M15 11h3m-3 4h2"
+                                ></path>
+                            </svg>
+                            <div>
+                                <p class="font-semibold text-gray-700">CMP: 081654</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center gap-3">
+                            <svg
+                                class="w-5 h-5 text-blue-400"
+                                fill="none"
+                                stroke="currentColor"
+                                viewBox="0 0 24 24"
+                            >
+                                <path
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                    stroke-width="2"
+                                    d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"
+                                ></path>
+                            </svg>
+                            <div>
+                                <p class="font-semibold text-gray-700">RNE: 046847</p>
+                            </div>
+                        </div>
+                    </div>
+                </h1>
+                <div class="mb-8 text-left py-10">
+                    <h3
+                        class="text-2xl font-bold text-blue-300 mb-4 border-b-2 border-gray-200 pb-2"
+                    >
+                        Perfil Profesional
+                    </h3>
+                    <p class="text-gray-700 leading-relaxed text-lg text-justify">
+                        Médico Cirujano especializado en Geriatría con sólida formación académica y más de 15 años de experiencia en el campo de la medicina especializada en el Adulto Mayor (60 años a más). Especialista en prevención, diagnóstico temprano, tratamiento de múltiples enfermedades, síndromes geriátricos y problemas funcionales, cognitivos, emocionales y sociales de los pacientes adultos mayores. Certificado en Cuidados Paliativos y Manejo del Dolor, comprometido con lograr el máximo nivel de autonomía e independencia en las personas mayores.
+                    </p>
+                </div>
 
-				<!-- Objetivo Profesional -->
-				<div class="bg-blue-50 p-6 rounded-xl mb-8">
-					<h3 class="text-xl font-bold text-navy mb-3">
-						Objetivo Profesional
-					</h3>
-					<p class="text-gray-700 leading-relaxed">
-						Lograr el máximo nivel de autonomía e independencia en
-						las personas mayores, promoviendo un envejecimiento
-						saludable y de calidad a través de una atención
-						integral, multidisciplinaria y humanizada que preserve
-						la dignidad y mejore la calidad de vida de cada
-						paciente.
-					</p>
-				</div>
-			</div>
-		</main>
-	</Layout>
+                <!-- Objetivo Profesional -->
+                <div class="bg-blue-100 p-6 rounded-xl mb-8">
+                    <h3 class="text-xl font-bold text-blue-300 mb-3">
+                        Objetivo Profesional
+                    </h3>
+                    <p class="text-gray-700 leading-relaxed">
+                        Lograr el máximo nivel de autonomía e independencia en
+                        las personas mayores, promoviendo un envejecimiento
+                        saludable y de calidad a través de una atención
+                        integral, multidisciplinaria y humanizada que preserve
+                        la dignidad y mejore la calidad de vida de cada
+                        paciente.
+                    </p>
+                </div>
+            </div>
+
+            <div class="bg-gray-50 rounded-2xl shadow-xl p-8 mb-8">
+                <div class="mb-8">
+                    <h3
+                        class="text-2xl font-bold text-blue-300 mb-4 border-b-2 border-gray-200 pb-2"
+                    >
+                        Formación Académica
+                    </h3>
+                </div>
+                <div class="space-y-6">
+                    <div class="flex items-start gap-4">
+                        <div
+                            class="w-12 h-12 bg-blue-300 rounded-lg flex items-center justify-center flex-shrink-0"
+                        >
+                            <svg
+                                class="w-6 h-6 text-gray-800 dark:text-white"
+                                aria-hidden="true"
+                                xmlns="http://www.w3.org/2000/svg"
+                                width="24"
+                                height="24"
+                                fill="none"
+                                viewBox="0 0 24 24"
+                            >
+                                <path
+                                    stroke="currentColor"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                    stroke-width="2"
+                                    d="M3.78552 9.5 12.7855 14l9-4.5-9-4.5-8.99998 4.5Zm0 0V17m3-6v6.2222c0 .3483 2 1.7778 5.99998 1.7778 4 0 6-1.3738 6-1.7778V11"
+                                ></path>
+                            </svg>
+                        </div>
+                        <div>
+                            <h4
+                                class="text-xl font-semibold mb-2 text-gray-700"
+                            >
+                                Especialización en Geriatría
+                            </h4>
+                            <p class="text-blue-300 mb-2">
+                                Hospital Nacional Almanzor Aguinaga Asenjo
+                            </p>
+                            <p class="text-gray-700">
+                                Especialización con énfasis en la prevención,
+                                diagnóstico temprano, tratamiento de múltiples
+                                enfermedades, síndromes geriátricos y problemas
+                                funcionales, cognitivos, emocionales y sociales
+                                de los pacientes adultos mayores.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="flex items-start gap-4">
+                        <div
+                            class="w-12 h-12 bg-green-600 rounded-lg flex items-center justify-center flex-shrink-0"
+                        >
+                            <svg
+                                class="w-6 h-6 text-gray-800 dark:text-white"
+                                aria-hidden="true"
+                                xmlns="http://www.w3.org/2000/svg"
+                                width="24"
+                                height="24"
+                                fill="currentColor"
+                                viewBox="0 0 24 24"
+                            >
+                                <path
+                                    fill-rule="evenodd"
+                                    d="M9 2.221V7H4.221a2 2 0 0 1 .365-.5L8.5 2.586A2 2 0 0 1 9 2.22ZM11 2v5a2 2 0 0 1-2 2H4v11a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2h-7ZM8 16a1 1 0 0 1 1-1h6a1 1 0 1 1 0 2H9a1 1 0 0 1-1-1Zm1-5a1 1 0 1 0 0 2h6a1 1 0 1 0 0-2H9Z"
+                                    clip-rule="evenodd"></path>
+                            </svg>
+                        </div>
+                        <div>
+                            <h4
+                                class="text-xl font-semibold mb-2 text-gray-700"
+                            >
+                                Diplomado en Cuidados Paliativos y Manejo del
+                                Dolor
+                            </h4>
+                            <p class="text-blue-300 mb-2">
+                                Universidad Nacional de Trujillo
+                            </p>
+                            <p class="text-gray-700">
+                                Formación especializada en el manejo integral
+                                del dolor y cuidados paliativos para mejorar la
+                                calidad de vida de pacientes con enfermedades
+                                avanzadas.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="flex items-start gap-4">
+                        <div
+                            class="w-12 h-12 bg-blue-700 rounded-lg flex items-center justify-center flex-shrink-0"
+                        >
+                            <svg
+                                class="w-6 h-6 text-gray-800 dark:text-white"
+                                aria-hidden="true"
+                                xmlns="http://www.w3.org/2000/svg"
+                                width="24"
+                                height="24"
+                                fill="none"
+                                viewBox="0 0 24 24"
+                            >
+                                <path
+                                    stroke="currentColor"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                    stroke-width="2"
+                                    d="M14.6144 7.19994c.3479.48981.5999 1.15357.5999 1.80006 0 1.6569-1.3432 3-3 3-1.6569 0-3.00004-1.3431-3.00004-3 0-.67539.22319-1.29865.59983-1.80006M6.21426 6v4m0-4 6.00004-3 6 3-6 2-2.40021-.80006M6.21426 6l3.59983 1.19994M6.21426 19.8013v-2.1525c0-1.6825 1.27251-3.3075 2.95093-3.6488l3.04911 2.9345 3-2.9441c1.7026.3193 3 1.9596 3 3.6584v2.1525c0 .6312-.5373 1.1429-1.2 1.1429H7.41426c-.66274 0-1.2-.5117-1.2-1.1429Z"
+                                ></path>
+                            </svg>
+                        </div>
+                        <div>
+                            <h4
+                                class="text-xl font-semibold mb-2 text-gray-700"
+                            >
+                                Médico Cirujano
+                            </h4>
+                            <p class="text-blue-300 mb-2">
+                                Universidad Nacional Pedro Ruiz Gallo
+                            </p>
+                            <p class="text-gray-700">
+                                Graduado como Médico Cirujano con sólidos
+                                conocimientos en medicina general y bases para
+                                la especialización en geriatría.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="bg-gray-50 rounded-2xl shadow-xl p-8 mb-8">
+                <div class="mb-8">
+                    <h3
+                        class="text-2xl font-bold text-blue-300 mb-4 border-b-2 border-gray-200 pb-2"
+                    >
+                        Experiencia Laboral
+                    </h3>
+                </div>
+                <div class="space-y-8 relative">
+                    <!-- Item 1 -->
+                    <div
+                        class="relative timeline-item pl-12 border-l-2 border-gray-400"
+                    >
+                        <div
+                            class="absolute -left-[15px] top-0 w-8 h-8 bg-blue-300 rounded-full flex items-center justify-center"
+                        >
+                            <div class="w-3 h-3 bg-white rounded-full"></div>
+                        </div>
+                        <div>
+                            <div
+                                class="flex flex-col md:flex-row md:items-center md:justify-between mb-3"
+                            >
+                                <h4 class="text-xl font-semibold text-gray-900">
+                                    Médico Geriatra
+                                </h4>
+                                <span
+                                    class="bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm font-medium"
+                                    >Sep 2024 - Actual</span
+                                >
+                            </div>
+                            <p class="text-blue-300 font-medium mb-2">
+                                Hospital de Apoyo Bagua Gustavo Lanatta Luján
+                            </p>
+                            <p class="text-gray-600 mb-3">
+                                Distrito de Bagua, Provincia de Bagua,
+                                Departamento de Amazonas
+                            </p>
+                            <ul class="text-gray-700 space-y-1">
+                                <li>• Atención especializada en geriatría</li>
+                                <li>• Valoración geriátrica integral</li>
+                                <li>• Manejo de síndromes geriátricos</li>
+                                <li>
+                                    • Coordinación con equipo multidisciplinario
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Item 2 -->
+                    <div
+                        class="relative timeline-item pl-12 border-l-2 border-gray-400"
+                    >
+                        <div
+                            class="absolute -left-[15px] top-0 w-8 h-8 bg-blue-300 rounded-full flex items-center justify-center"
+                        >
+                            <div class="w-3 h-3 bg-white rounded-full"></div>
+                        </div>
+                        <div>
+                            <div
+                                class="flex flex-col md:flex-row md:items-center md:justify-between mb-3"
+                            >
+                                <h4 class="text-xl font-semibold text-gray-900">
+                                    Médico Geriatra
+                                </h4>
+                                <span
+                                    class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm font-medium"
+                                    >Jul 2022 - Actual</span
+                                >
+                            </div>
+                            <p class="text-blue-300 font-medium mb-2">
+                                Hospital General de Jaén
+                            </p>
+                            <p class="text-gray-600 mb-3">
+                                Distrito de Jaén, Provincia de Jaén,
+                                Departamento de Cajamarca
+                            </p>
+                            <ul class="text-gray-700 space-y-1">
+                                <li>• Consulta externa geriátrica</li>
+                                <li>• Hospitalización de adultos mayores</li>
+                                <li>• Interconsultas en emergencia</li>
+                                <li>• Programas de prevención geriátrica</li>
+                                <li>• Supervisión de residentes</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main></Layout
+>
