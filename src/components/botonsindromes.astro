@@ -1,0 +1,12 @@
+---
+const { name, icon } = Astro.props;
+---
+
+<button
+    class="btn-procedimiento flex items-center px-4 py-3 rounded-full transition-all duration-300 bg-white text-gray-800 hover:bg-gray-200"
+>
+    <span class="mr-2">
+        <slot />
+    </span>
+    <span class="ml-2">{name}</span>
+</button>

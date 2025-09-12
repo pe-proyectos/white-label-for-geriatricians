@@ -48,18 +48,33 @@
                         <label class="font-semibold text-sm text-gray-500">
                             Sede preferida*
                             <select
+                            
                                 id="sede-select"
-                                class="w-full p-4 border border-gray-300 rounded-lg focus:border-navy focus:ring focus:ring-blue-200 transition duration-300"
+                                class="w-full p-4 border border-gray-300 rounded-lg focus:border-navy focus:ring focus:ring-blue-200 transition duration-300 overflow-auto"
                             >
-                                <option disabled="" selected=""
+                                <option disabled="" selected="" class="hidden"
                                     >Selecciona una sede</option
                                 >
                                 <option>Jaén - Hospital General</option>
-                                <option>Bagua - Hospital de Apoyo</option>
                                 <option>Jaén - Clínica de la Solidaridad</option
                                 >
                                 <option>Jaén - Clínica San Juan</option>
+                                <option>Jaén - Centro Médico San Nicolas</option
+                                >
+                                <option>Jaén - Clínica Quiruclinic</option>
+                                <option>Jaén - Clínica Neuromedic</option>
+                                <option>Jaén - Clínica Cadilab (Calle Pardo)</option>
+                                <option>Jaén - Clínica Cadilab (Av Pakamuros)</option>
+                                <option>Jaén - Lab Norberth Winnner</option>
+                                <option>Jaén - Clínica Ebenezer</option>
+                                <option>Jaén - Clínica Belen</option>
+                                <option>Jaén - Clínica Ángel</option>
+                                <option>Jaén - Clínica Alienta</option>
+                                <option>Bagua - Hospital Gustavo Lanattta</option>
                                 <option>Bagua - Clínica Interamericana</option>
+                                <option>Bagua - Clínica pediatric Kids y Especialidades</option>
+                                <option>Bagua - Clínica Montecarlo</option>
+                                <option>Bagua - Clínica Cadilab (Calle Sargento)</option>
                                 <option>Atención Domiciliaria</option>
                             </select>
                         </label>
@@ -270,4 +285,33 @@
         </div>
     </div>
 </section>
-<script src="/src/utils/form.ts"></script>
+<script>
+    document.getElementById("btn-enviar")?.addEventListener("click", function () {
+    const formNombre = (document.getElementById("inputNombre") as HTMLInputElement)?.value.trim();
+    const formDNI = (document.getElementById("inputDni") as HTMLInputElement)?.value.trim();
+    const formEdad = (document.getElementById("inputEdad") as HTMLInputElement)?.value.trim();
+    const formSede = (document.getElementById("sede-select") as HTMLSelectElement)?.value;
+    const formConsulta = (document.getElementById("consulta-select") as HTMLSelectElement)?.value;
+    const areaConsulta = (document.getElementById("consulta-adicional") as HTMLSelectElement)?.value;
+
+    if (!formNombre || !formDNI || !formEdad || !formSede || !formConsulta) {
+        alert("Necesitas rellenar todos los campos antes de enviar tu solicitud.");
+        return;
+    }
+
+    const mensaje = `*Solicitud de Cita Médica*%0A%0A` +
+        `👤 *Paciente:* ${formNombre}%0A` +
+        `🆔 *DNI:* ${formDNI}%0A` +
+        `🎂 *Edad:* ${formEdad} años%0A%0A` +
+        `📍 *Sede preferida:* ${formSede}%0A` +
+        `🩺 *Tipo de consulta:* ${formConsulta}%0A` +
+        `📝 *Descripción adicional:* ${areaConsulta || "No especificada"}%0A%0A` +
+        `Le agradecería confirmarme la disponibilidad para esta cita.%0A` +
+        `Muchas gracias. 🙏`;
+
+    const numeroWhatsApp = "";
+    const url = `https://api.whatsapp.com/send?phone=${numeroWhatsApp}&text=${mensaje}`;
+
+    window.open(url, "_blank");
+});
+</script>

@@ -2,9 +2,9 @@
 import Layout from "../layouts/Layout.astro";
 import VGIsection from "../components/VGIsection.astro";
 import Formsection from "../components/Formsection.astro";
-import Footersection from "../components/Footersection.astro";
 import Mapasection from "../components/Mapasection.astro";
 import Conocesection from "../components/Conocesection.astro";
+import Sindromesseccion from "../components/Sindromesseccion.astro";
 
 // Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
 // Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
@@ -55,9 +55,10 @@ import Conocesection from "../components/Conocesection.astro";
 						<li>+ 15 clínicas especializadas</li>
 					</ul>
 				</div>
-				<button
-					class="bg-[#84b6f4] rounded-full text-white py-2.5 px-6 w-fit cursor-pointer"
-					>Solicitar Consulta Geriátrica</button
+				<a
+					href="#form"
+					class="bg-[#84b6f4] hover:bg-[#67a4f0] : rounded-full text-white py-2.5 px-6 w-fit cursor-pointer"
+					>Solicitar Consulta Geriátrica</a
 				>
 			</div>
 			<div class="flex w-1/2 justify-center">
@@ -75,6 +76,8 @@ import Conocesection from "../components/Conocesection.astro";
 	</section>
 	<Conocesection />
 	<Mapasection />
+	<Sindromesseccion />
 	<VGIsection />
 	<Formsection />
+	
 </Layout>
