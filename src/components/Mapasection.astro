@@ -233,22 +233,25 @@ import Cardclinicas from "./Cardclinicas.astro";
                     class="w-full h-[20rem] md:h-[30rem] rounded-4xl z-0 shadow-md shadow-gray-300 relative"
                 >
                 </div>
-                <div class="absolute mx-auto top-5 md:top-15 left-1/2 -translate-x-1/2 p">
+                <div
+                    class="absolute mx-auto top-5 md:top-15 left-1/2 -translate-x-1/2 p"
+                >
                     <div
                         class="flex justify-center w-full gap-2 bg-white/90 md:px-4 px-2 md:py-3 py-1 rounded-full"
                     >
                         <div>
                             <button
-                                id="centrarmapa"
+                                id="reiniciarmapa"
                                 class="font-semibold px-5 py-1.5 border-1 rounded-full bg-[#84b6f4] hover:bg-[#67a4f0] text-white w-fit md:w-[7rem] md:text-base text-xs"
                                 >Reiniciar</button
                             >
                         </div>
                         <div>
                             <button
+                                id="centrarmapa"
                                 class="font-semibold px-5 py-1.5 border-1 rounded-full bg-[#84b6f4] hover:bg-[#67a4f0] text-white w-fit md:w-[7rem] md:text-base text-xs"
                             >
-                                Centrar
+                                Ubicarme
                             </button>
                         </div>
                     </div>
@@ -265,7 +268,7 @@ import Cardclinicas from "./Cardclinicas.astro";
         var mapita = L.map("map").setView(coor_inicial, zoom_inicial);
         // @ts-ignore
         L.tileLayer("https://tile.openstreetmap.org/{z}/{x}/{y}.png", {
-            minZoom: 10,
+            minZoom: 6,
             maxZoom: 19,
             attribution:
                 '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>',
@@ -281,9 +284,9 @@ import Cardclinicas from "./Cardclinicas.astro";
             marker.bindPopup(u.name);
         });
 
-        let centrar = document.querySelector("#centrarmapa");
+        let centrar = document.querySelector("#reiniciarmapa");
         centrar?.addEventListener("click", () => {
-            mapita.setView(coor_inicial,zoom_inicial);
+            mapita.setView(coor_inicial, zoom_inicial);
         });
 
         const botones = document.querySelectorAll(".btn-clinica");
@@ -317,5 +320,22 @@ import Cardclinicas from "./Cardclinicas.astro";
                 }
             });
         });
+
+        document
+            .querySelector("#centrarmapa")
+            ?.addEventListener("click", () =>
+                navigator.geolocation.getCurrentPosition(
+                    (p) =>{
+                    const ubi_user=[p.coords.latitude, p.coords.longitude];
+                        // @ts-ignore
+                        L.marker(ubi_user)
+                            .addTo(mapita)
+                            .bindPopup("📍 Estás aquí")
+                            .openPopup();
+
+                        mapita.fitBounds([ubi_user, coor_inicial])
+                    }
+              ),
+            );
     </script>
 </section>
