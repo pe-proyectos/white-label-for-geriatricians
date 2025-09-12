@@ -1,0 +1,171 @@
+---
+import Cardclinicas from "./Cardclinicas.astro";
+---
+
+<section id="Ubicacion">
+    <div class="px-19 py-10">
+        <div class="justify-items-center mb-10">
+            <h3 class="text-[2.15rem] font-bold text-gray-800 mb-2.5">
+                Centros de <span class="text-[#84b6f4]">Consulta</span>
+            </h3>
+            <div class="border-b-4 w-20 border-[#84b6f4]"></div>
+        </div>
+        <div class="flex">
+            <div class="flex flex-col w-1/3 ">
+                <div>
+                    <h1 class="flex gap-2 font-bold items-center">
+                        <svg
+                            class="w-5 h-5 text-gray-80"
+                            aria-hidden="true"
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="24"
+                            height="24"
+                            fill="none"
+                            viewBox="0 0 24 24"
+                        >
+                            <path
+                                stroke="currentColor"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                stroke-width="2"
+                                d="M12 13a3 3 0 1 0 0-6 3 3 0 0 0 0 6Z"></path>
+                            <path
+                                stroke="currentColor"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                stroke-width="2"
+                                d="M17.8 13.938h-.011a7 7 0 1 0-11.464.144h-.016l.14.171c.1.127.2.251.3.371L12 21l5.13-6.248c.194-.209.374-.429.54-.659l.13-.155Z"
+                            ></path>
+                        </svg>
+                        Encuentra una ubicación cerca de ti
+                    </h1>
+                </div>
+                <div>
+                    <div>
+                        <button 
+                            class="btn-clinica cursor-pointer gap-58 flex pt-3 pb-3.5 items-center font-bold"
+                            >Ciudad de Jaén (12)<svg
+                                class="w-4 h-4 text-gray-800"
+                                aria-hidden="true"
+                                xmlns="http://www.w3.org/2000/svg"
+                                width="24"
+                                height="24"
+                                fill="none"
+                                viewBox="0 0 24 24"
+                            >
+                                <path
+                                    stroke="currentColor"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                    stroke-width="2"
+                                    d="m19 9-7 7-7-7"></path>
+                            </svg>
+                        </button>
+                        <div class="lista-clinicas h-86 overflow-auto" style="visibility: visible">
+                            <Cardclinicas
+                                name="Hospital General de Jaén"
+                                address="Distrito de Jaén, Provincia de Jaén, Departamento de Cajamarca"
+                            />
+                            <Cardclinicas
+                                name="Clínica de la Solidaridad"
+                                address="Calle Garcilazo de la Vega N° 415 - Jaén"
+                            />
+                            <Cardclinicas
+                                name="Clínica San Juan"
+                                address="Calle Túpac Amaru N° 695 - Jaén"
+                            />
+                            <Cardclinicas
+                                name="Centro Médico San Nicolas"
+                                address="Calle Alfredo Bastos N° 246"
+                            />
+                            <Cardclinicas
+                                name="Clínica Quiruclinic"
+                                address="Calle San Martín N° 1641"
+                            />
+                            <Cardclinicas
+                                name="Neuromedic Jaén"
+                                address="Calle Ecología N°111 Urb Gran Marañón Altura Puente Pakamuros"
+                            />
+                            <Cardclinicas
+                                name="Cadilab"
+                                address="Calle Pardo Miguel N° 270"
+                            />
+                            <Cardclinicas
+                                name="Cadilab"
+                                address="Av Pakamuros N° 1212"
+                            />
+                            <Cardclinicas
+                                name="Lab Norberth Winnner Jaén"
+                                address="Calle Los Lirios 170"
+                            />
+                            <Cardclinicas
+                                name="Clínica Ebenezer"
+                                address="Calle Garcilazo de la Vega N° 407 "
+                            />
+                            <Cardclinicas
+                                name="Clínica Belen"
+                                address="Calle Huamantanga N° 999"
+                            />
+                            <Cardclinicas
+                                name="Clínica Ángel"
+                                address="Calle Zarumilla 1316"
+                            />
+                            <Cardclinicas
+                                name="Clínica Alienta"
+                                address="Prolongación Raymondi N° 103"
+                            />
+                        </div>
+                    </div>
+                    <div>
+                        <button 
+                            class="btn-clinica cursor-pointer gap-57 flex pt-3 pb-3.5 items-center font-bold"
+                            >Ciudad de Bagua (5)<svg
+                                class="w-4 h-4 text-gray-800"
+                                aria-hidden="true"
+                                xmlns="http://www.w3.org/2000/svg"
+                                width="24"
+                                height="24"
+                                fill="none"
+                                viewBox="0 0 24 24"
+                            >
+                                <path
+                                    stroke="currentColor"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                    stroke-width="2"
+                                    d="m19 9-7 7-7-7"></path>
+                            </svg>
+                        </button>
+                        <div class="lista-clinicas h-fit overflow-auto" style="display:none">
+                            <Cardclinicas
+                                name="Hospital De Apoyo Bagua Gustavo Lanatta Luján"
+                                address="Distrito de Bagua, Provincia de Bagua, Departamento de Amazonas"
+                            />
+                            <Cardclinicas
+                                name="Clínica Interamericana"
+                                address="Av. Héroes del Cenepa N1795"
+                            />
+                            <Cardclinicas
+                                name="Clínica Pediatric Kids y Especialidades"
+                                address="Jr. La Verdad N°628"
+                            />
+                            <Cardclinicas
+                                name="Clínica Montecarlo"
+                                address="Jr. Comercio N° 576 Bagua"
+                            />
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="w-full md:w-2/3 p-10 md:p-0 md:pl-15 items-center">
+                <div
+                    id="map"
+                    class="w-full h-[20rem] md:h-[30rem] rounded-4xl z-0 shadow-md shadow-gray-300"
+                >
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<script src="/src/utils/mapa.js"></script>
+<script src="/src/utils/selectormapa.js"></script>

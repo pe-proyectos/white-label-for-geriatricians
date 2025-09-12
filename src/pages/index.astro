@@ -3,6 +3,8 @@ import Layout from "../layouts/Layout.astro";
 import VGIsection from "../components/VGIsection.astro";
 import Formsection from "../components/Formsection.astro";
 import Footersection from "../components/Footersection.astro";
+import Mapasection from "../components/Mapasection.astro";
+import Conocesection from "../components/Conocesection.astro";
 
 // Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
 // Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
@@ -58,83 +60,14 @@ import Footersection from "../components/Footersection.astro";
 					>Solicitar Consulta Geriátrica</button
 				>
 			</div>
-			<div class="flex w-1/2"></div>
-		</div>
-	</section>
-	<section id="perfil">
-		<div class="px-19 py-10">
-			<div class="justify-items-center mb-6">
-				<h3 class="text-[2.15rem] font-bold text-gray-800 mb-2.5">
-					Conoce a Tu <span class="text-[#84b6f4]">Geriatra</span>
-				</h3>
-				<div class="border-b-4 w-20 border-[#84b6f4]"></div>
-			</div>
-			<div class="flex">
-				<div class="flex w-1/2"></div>
-				<div
-					class="flex flex-col w-1/2 px-8 py-6 bg-gray-50 rounded-2xl"
-				>
-					<h4 class="text-[1.65rem] font-bold text-gray-800">
-						Dr. Juan Andrés Jambo Mendoza
-					</h4>
-					<div class="flex gap-3 mt-1 mb-4">
-						<p
-							class="py-0.5 px-2.5 bg-[#84b6f4] text-sm text-white rounded-full"
-						>
-							Geriatra Certificado
-						</p>
-						<p
-							class="py-0.5 px-2.5 bg-[#84b6f4]/25 text-sm text-[#84b6f4] rounded-full"
-						>
-							CMP 081654
-						</p>
-						<p
-							class="py-0.5 px-2.5 bg-[#84b6f4]/25 text-sm text-[#84b6f4] rounded-full"
-						>
-							RNE 046847
-						</p>
-					</div>
-					<p class="text-gray-700">
-						Con más de una década dedicado al cuidado del adulto
-						mayor, el Dr. Jambo transforma la experiencia médica en
-						un acompañamiento integral para el bienestar. Formado en
-						la Universidad Pedro Ruiz Gallo y especializado en el
-						Hospital Almanzor Aguinaga, entiende que cada paciente
-						tiene una historia única que merece atención
-						personalizada. Su enfoque se centra en preservar la
-						independencia, optimizar la calidad de vida y fortalecer
-						la confianza de sus pacientes para disfrutar plenamente
-						esta etapa de la vida.
-					</p>
-					<p class="text-[#84b6f4]/95 font-bold text-xl">
-						Especialidades
-					</p>
-					<div class="flex">
-						<ul
-							class="flex flex-col w-1/2 list-inside text-gray-700"
-						>
-							<li>
-								<span class="bg-[#84b6f4]/95"></span>Valoración
-								Geriátrica Integral
-							</li>
-							<li>
-								<span class="bg-[#84b6f4]/95"></span>Cuidados
-								Paliativos
-							</li>
-							<li><span></span>Medicina Preventiva</li>
-						</ul>
-						<ul
-							class="flex flex-col w-1/2 list-inside text-gray-700"
-						>
-							<li><span></span>Síndromes Geriátricos</li>
-							<li><span></span>Manejo del Dolor</li>
-							<li><span></span>Atención Domiciliaria</li>
-						</ul>
-					</div>
-				</div>
+			<div class="flex w-1/2 justify-center">
+				<div class="bg-[#84b6f4]/70 w-80 h-80 rounded-full relative top-19 right-1 "></div>
+				<img src="/src/resources/img/geriatra_juan.png" class="w-115 h-115 absolute" alt="">
 			</div>
 		</div>
 	</section>
+	<Conocesection/>
+	<Mapasection/>
 	<VGIsection />
 	<Formsection />
 	<Footersection />

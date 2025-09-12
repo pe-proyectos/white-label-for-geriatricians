@@ -10,5 +10,12 @@
   },
   "dependencies": {
     "astro": "^5.13.7"
+  },
+  "private": true,
+  "devDependencies": {
+    "@types/bun": "latest"
+  },
+  "peerDependencies": {
+    "typescript": "^5"
   }
 }
