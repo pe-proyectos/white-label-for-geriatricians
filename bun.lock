@@ -7,7 +7,7 @@
         "astro": "^5.13.7",
       },
       "devDependencies": {
-        "@types/bun": "latest",
+        "@types/bun": "^1.2.21",
       },
       "peerDependencies": {
         "typescript": "^5",

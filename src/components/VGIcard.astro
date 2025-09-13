@@ -1,5 +1,5 @@
 ---
-const { title, details, colorFrom, colorTo, color, colorText} = Astro.props;
+const { title, details, colorFrom, colorTo, color, colorText, importantIndex, icon} = Astro.props;
 ---
 
 <div class={`bg-gradient-to-br from-${colorFrom} to-${colorTo} p-6 rounded-xl shadow-md`}>
@@ -16,11 +16,11 @@ const { title, details, colorFrom, colorTo, color, colorText} = Astro.props;
                 stroke-linecap="round"
                 stroke-linejoin="round"
                 stroke-width="2"
-                d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                d={`${icon}`}></path>
         </svg>
     </div>
     <h3 class={`text-lg font-bold text-[${color}] mb-3`}>{title}</h3>
     <ul class={`text-${colorText} text-sm space-y-1 list-disc list-inside`}>
-        {details.map((detalle: string) => <li>{detalle}</li>)}
+        {details.map((detalle: string, indice : number) => <li class={"list-disc "+(indice == importantIndex?`font-bold text-[${color}] `:"font-normal")}> {detalle}</li>)}
     </ul>
 </div>
