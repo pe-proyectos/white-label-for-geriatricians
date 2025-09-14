@@ -1,153 +1,1560 @@
----
-import Botonsindromes from "./botonsindromes.astro";
-import Contenidosindrome from "./contenidosindrome.astro";
----
-
-<section id="Ubicacion" class="bg-gray-100">
-    <div class="px-19 py-10">
-        <div class="flex flex-col text-center items-center mb-10">
-            <h3 class="text-[2.15rem] font-bold text-gray-800 mb-2.5">
-                Síndromes <span class="text-[#84b6f4]">Geriátricos</span>
+<section id="procedimientos" class="md:flex-col z-20 flex py-20 px-4 bg-white">
+    <div class="md:w-auto md:px-20 w-full mx-auto">
+        <!-- Título -->
+        <!-- Título -->
+        <div class="text-center mb-12">
+            <h3 class="text-[1.5rem] md:text-3xl font-bold m-4">
+                Síndromes <span class="text-red-500">Geriátricos</span>
             </h3>
-            <div class="border-b-4 w-20 border-[#84b6f4]"></div>
-            <p class="text-gray-800 text-lg max-w-2xl mt-5">
-                Diagnóstico y manejo especializado de condiciones clínicas
-                multifactoriales en adultos mayores
+            <p class="text-gray-600 text-lg max-w-2xl mx-auto">
+                Abordaje integral de los principales síndromes geriátricos con
+                enfoque multidimensional, funcional, social y clínico para el
+                adulto mayor.
             </p>
         </div>
 
-        <div class="flex justify-center mb-12 gap-2 md:gap-4">
+        <!-- Carrusel con flechas -->
+        <div class="relative flex items-center mb-12">
+            <!-- Botón izquierdo -->
             <button
-                id="prevBtn"
-                class="hidden md:flex items-center justify-center w-12 h-12 rounded-full bg-white shadow-lg hover:shadow-xl transition-all duration-300 text-gray-600 hover:text-[#84b6f4]"
+                id="btn-left"
+                class="absolute left-0 z-10 bg-blue-200 text-gray-200 hover:bg-gray-200 hover:text-blue-200 rounded-full p-2 shadow-md transition-colors"
             >
-                <i class="flecha flecha-derecha text-lg"></i>
+                <svg
+                    class="w-6 h-6"
+                    aria-hidden="true"
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                >
+                    <path
+                        stroke="currentColor"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="m15 19-7-7 7-7"></path>
+                </svg>
             </button>
 
+            <!-- Carrusel -->
             <div
-                class="contenido-carrusel overflow-x-hidden scrollbar-hide w-1/2 flex gap-3"
+                id="carousel"
+                class="flex gap-4 scroll-smooth overflow-x-hidden px-12 w-250"
             >
-                <Botonsindromes name="Delirio">
-                    <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        width="24"
-                        height="24"
-                        viewBox="0 0 24 24"
-                        fill="none"
-                        stroke="currentColor"
-                        stroke-width="2"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        class="w-6 h-6"
-                    >
-                        <path d="M22 12h-4l-3 9L9 3l-3 9H2"></path>
-                    </svg>
-                </Botonsindromes>
-                <Botonsindromes name="Delirio">
-                    <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        width="24"
-                        height="24"
-                        viewBox="0 0 24 24"
-                        fill="none"
-                        stroke="currentColor"
-                        stroke-width="2"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        class="w-6 h-6"
-                    >
-                        <path d="M22 12h-4l-3 9L9 3l-3 9H2"></path>
-                    </svg>
-                </Botonsindromes>
-                <Botonsindromes name="Delirio">
-                    <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        width="24"
-                        height="24"
-                        viewBox="0 0 24 24"
-                        fill="none"
-                        stroke="currentColor"
-                        stroke-width="2"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        class="w-6 h-6"
-                    >
-                        <path d="M22 12h-4l-3 9L9 3l-3 9H2"></path>
-                    </svg>
-                </Botonsindromes>
-                <Botonsindromes name="Delirio">
-                    <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        width="24"
-                        height="24"
-                        viewBox="0 0 24 24"
-                        fill="none"
-                        stroke="currentColor"
-                        stroke-width="2"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        class="w-6 h-6"
-                    >
-                        <path d="M22 12h-4l-3 9L9 3l-3 9H2"></path>
-                    </svg>
-                </Botonsindromes>
-                <Botonsindromes name="Delirio">
-                    <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        width="24"
-                        height="24"
-                        viewBox="0 0 24 24"
-                        fill="none"
-                        stroke="currentColor"
-                        stroke-width="2"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        class="w-6 h-6"
-                    >
-                        <path d="M22 12h-4l-3 9L9 3l-3 9H2"></path>
-                    </svg>
-                </Botonsindromes>
-                <Botonsindromes name="Delirio">
-                    <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        width="24"
-                        height="24"
-                        viewBox="0 0 24 24"
-                        fill="none"
-                        stroke="currentColor"
-                        stroke-width="2"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        class="w-6 h-6"
-                    >
-                        <path d="M22 12h-4l-3 9L9 3l-3 9H2"></path>
-                    </svg>
-                </Botonsindromes>
-                <Botonsindromes name="Delirio">
-                    <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        width="24"
-                        height="24"
-                        viewBox="0 0 24 24"
-                        fill="none"
-                        stroke="currentColor"
-                        stroke-width="2"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        class="w-6 h-6"
-                    >
-                        <path d="M22 12h-4l-3 9L9 3l-3 9H2"></path>
-                    </svg>
-                </Botonsindromes>
+                <button
+                    class="btn-procedimiento flex items-center px-4 py-3 rounded-full transition-all duration-300 bg-gray-100 text-gray-700 hover:bg-gray-200 shrink-0"
+                >
+                    <span class="mr-2">🧠</span>
+                    <span>Delirio</span>
+                </button>
+
+                <button
+                    class="btn-procedimiento flex items-center px-4 py-3 rounded-full transition-all duration-300 bg-gray-100 text-gray-700 hover:bg-gray-200 shrink-0"
+                >
+                    <span class="mr-2">💪</span>
+                    <span>Fragilidad</span>
+                </button>
+                <button
+                    class="btn-procedimiento flex items-center px-4 py-3 rounded-full transition-all duration-300 bg-gray-100 text-gray-700 hover:bg-gray-200 shrink-0"
+                >
+                    <span class="mr-2">⚠️</span>
+                    <span>Caídas</span>
+                </button>
+                <button
+                    class="btn-procedimiento flex items-center px-4 py-3 rounded-full transition-all duration-300 bg-gray-100 text-gray-700 hover:bg-gray-200 shrink-0"
+                >
+                    <span class="mr-2">💊</span>
+                    <span>Polifarmacia</span>
+                </button>
+                <button
+                    class="btn-procedimiento flex items-center px-4 py-3 rounded-full transition-all duration-300 bg-gray-100 text-gray-700 hover:bg-gray-200 shrink-0"
+                >
+                    <span class="mr-2">🍎</span>
+                    <span>Malnutrición y Sarcopenia</span>
+                </button>
+                <button
+                    class="btn-procedimiento flex items-center px-4 py-3 rounded-full transition-all duration-300 bg-gray-100 text-gray-700 hover:bg-gray-200 shrink-0"
+                >
+                    <span class="mr-2">🧩</span>
+                    <span>Deterioro cognitivo y demencia</span>
+                </button>
+                <button
+                    class="btn-procedimiento flex items-center px-4 py-3 rounded-full transition-all duration-300 bg-gray-100 text-gray-700 hover:bg-gray-200 shrink-0"
+                >
+                    <span class="mr-2">🚶</span>
+                    <span>Trastorno de la marcha</span>
+                </button>
+                <button
+                    class="btn-procedimiento flex items-center px-4 py-3 rounded-full transition-all duration-300 bg-gray-100 text-gray-700 hover:bg-gray-200 shrink-0"
+                >
+                    <span class="mr-2">🚽</span>
+                    <span>Incontinencia urinaria y fecal</span>
+                </button>
+                <button
+                    class="btn-procedimiento flex items-center px-4 py-3 rounded-full transition-all duration-300 bg-gray-100 text-gray-700 hover:bg-gray-200 shrink-0"
+                >
+                    <span class="mr-2">🔄</span>
+                    <span>Estreñimiento</span>
+                </button>
+                <button
+                    class="btn-procedimiento flex items-center px-4 py-3 rounded-full transition-all duration-300 bg-gray-100 text-gray-700 hover:bg-gray-200 shrink-0"
+                >
+                    <span class="mr-2">🛌</span>
+                    <span>Úlceras por presión</span>
+                </button>
+                <button
+                    class="btn-procedimiento flex items-center px-4 py-3 rounded-full transition-all duration-300 bg-gray-100 text-gray-700 hover:bg-gray-200 shrink-0"
+                >
+                    <span class="mr-2">😴</span>
+                    <span>Trastornos del sueño (Insomnio)</span>
+                </button>
+                <button
+                    class="btn-procedimiento flex items-center px-4 py-3 rounded-full transition-all duration-300 bg-gray-100 text-gray-700 hover:bg-gray-200 shrink-0"
+                >
+                    <span class="mr-2">👁️</span>
+                    <span>Alteraciones sensoriales (audición y visión)</span>
+                </button>
+                <button
+                    class="btn-procedimiento flex items-center px-4 py-3 rounded-full transition-all duration-300 bg-gray-100 text-gray-700 hover:bg-gray-200 shrink-0"
+                >
+                    <span class="mr-2">😣</span>
+                    <span>Dolor (agudo y crónico)</span>
+                </button>
+                <button
+                    class="btn-procedimiento flex items-center px-4 py-3 rounded-full transition-all duration-300 bg-gray-100 text-gray-700 hover:bg-gray-200 shrink-0"
+                >
+                    <span class="mr-2">🦽</span>
+                    <span>Limitación funcional o dismovilidad</span>
+                </button>
+                <button
+                    class="btn-procedimiento flex items-center px-4 py-3 rounded-full transition-all duration-300 bg-gray-100 text-gray-700 hover:bg-gray-200 shrink-0"
+                >
+                    <span class="mr-2">😢</span>
+                    <span>Depresión y otros trastornos afectivos</span>
+                </button>
+                <button
+                    class="btn-procedimiento flex items-center px-4 py-3 rounded-full transition-all duration-300 bg-gray-100 text-gray-700 hover:bg-gray-200 shrink-0"
+                >
+                    <span class="mr-2">🔗</span>
+                    <span>Multimorbilidad</span>
+                </button>
             </div>
+
+            <!-- Botón derecho -->
             <button
-                id="nextBtn"
-                class="hidden md:flex items-center justify-center w-12 h-12 rounded-full bg-white shadow-lg hover:shadow-xl transition-all duration-300 text-gray-600 hover:text-[#84b6f4]"
+                id="btn-right"
+                class="absolute right-0 z-10 bg-blue-200 text-gray-200 hover:bg-gray-200 hover:text-blue-200 rounded-full p-2 shadow-md transition-colors"
             >
-                <i class="flecha flecha-izquierda text-lg"></i>
+                <svg
+                    class="w-6 h-6"
+                    aria-hidden="true"
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                >
+                    <path
+                        stroke="currentColor"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="m9 5 7 7-7 7"></path>
+                </svg>
             </button>
         </div>
-        <Contenidosindrome />
-    </div>
 
+        <!-- Sección 1: Delirio -->
+        <div
+            class="procedimiento-seccion flex flex-col md:flex-row gap-12 items-start px-5 md:px-0"
+        >
+            <div class="w-full md:w-1/2 flex flex-col items-center gap-6">
+                <img
+                    src="/src/resources/img/delirio.jpeg"
+                    alt="Delirio en paciente geriátrico"
+                    class="rounded-2xl shadow-md hover:shadow-xl transition-shadow duration-300 w-full object-cover max-w-2xl"
+                />
+            </div>
+            <div class="w-full md:w-1/2 flex flex-col gap-9">
+                <div
+                    class="bg-[#84b6f4]/10 p-4 border-l-4 border-[#84b6f4] rounded-xl shadow-sm"
+                >
+                    <h3 class="text-xl font-bold text-[#84b6f4] mb-1">
+                        Delirio
+                    </h3>
+                    <p class="text-gray-700">
+                        Síndrome agudo, fluctuante y reversible, caracterizado
+                        por alteración de la conciencia, atención y cognición,
+                        frecuente en hospitalización de adultos mayores.
+                    </p>
+                </div>
+                <div class="flex gap-6">
+                    <div
+                        class="flex flex-col w-1/2 py-2 px-4 bg-white rounded-xl shadow"
+                    >
+                        <p class="text-lg text-gray-800 mb-4">
+                            Características
+                        </p>
+                        <ul class="flex flex-col gap-3">
+                            <li class="text-gray-700 flex gap-2 items-start">
+                                <span class="text-blue-500 mt-1">•</span>
+                                Inicio agudo y curso fluctuante
+                            </li>
+                            <li class="text-gray-700 flex gap-2 items-start">
+                                <span class="text-blue-500 mt-1">•</span>
+                                Alteración de la atención y desorientación
+                            </li>
+                            <li class="text-gray-700 flex gap-2 items-start">
+                                <span class="text-blue-500 mt-1">•</span>
+                                Asociado a infecciones, fármacos o dolor no tratado
+                            </li>
+                            <li class="text-gray-700 flex gap-2 items-start">
+                                <span class="text-blue-500 mt-1">•</span>
+                                Incrementa el riesgo de caídas y complicaciones hospitalarias
+                            </li>
+                            <li class="text-gray-700 flex gap-2 items-start">
+                                <span class="text-blue-500 mt-1">•</span>
+                                Se relaciona con mayor mortalidad y deterioro cognitivo
+                                posterior
+                            </li>
+                        </ul>
+                    </div>
+                    <div
+                        class="flex flex-col w-1/2 py-2 px-4 bg-white rounded-xl shadow"
+                    >
+                        <p class="text-lg text-gray-800 mb-4">Manejo</p>
+                        <ul class="flex flex-col gap-3">
+                            <li class="text-gray-700 flex gap-2 items-start">
+                                <span class="text-blue-500">•</span>
+                                Identificar y tratar la causa desencadenante
+                            </li>
+                            <li class="text-gray-700 flex gap-2 items-start">
+                                <span class="text-blue-500">•</span>
+                                Evitar fármacos con efecto anticolinérgico
+                            </li>
+                            <li class="text-gray-700 flex gap-2 items-start">
+                                <span class="text-blue-500">•</span>
+                                Orientación frecuente (reloj, calendario, acompañamiento)
+                            </li>
+                            <li class="text-gray-700 flex gap-2 items-start">
+                                <span class="text-blue-500">•</span>
+                                Optimizar sueño, hidratación, nutrición
+                            </li>
+                            <li class="text-gray-700 flex gap-2 items-start">
+                                <span class="text-blue-500">•</span>
+                                Movilización temprana y prevención de complicaciones
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Sección 2: Fragilidad -->
+        <div
+            class="procedimiento-seccion hidden flex flex-col md:flex-row gap-12 items-start px-5 md:px-0"
+        >
+            <div class="w-full md:w-1/2 flex flex-col items-center gap-6">
+                <img
+                    src="/src/resources/img/fragilidad.jpeg"
+                    alt="Fragilidad en adulto mayor"
+                    class="rounded-2xl shadow-md hover:shadow-xl transition-shadow duration-300 w-full object-cover max-w-2xl"
+                />
+            </div>
+            <div class="w-full md:w-1/2 flex flex-col gap-9">
+                <div
+                    class="bg-[#84b6f4]/10 p-4 border-l-4 border-[#84b6f4] rounded-xl shadow-sm"
+                >
+                    <h3 class="text-xl font-bold text-[#84b6f4] mb-1">
+                        Fragilidad
+                    </h3>
+                    <p class="text-gray-700">
+                        Estado clínico de vulnerabilidad con menor reserva
+                        fisiológica, predisponiendo a eventos adversos.
+                    </p>
+                </div>
+                <div class="flex gap-6">
+                    <div
+                        class="flex flex-col w-1/2 py-2 px-4 bg-white rounded-xl shadow"
+                    >
+                        <p class="text-lg text-gray-800 mb-4">
+                            Características
+                        </p>
+                        <ul class="flex flex-col gap-3">
+                            <li class="text-gray-700 flex gap-2 items-start">
+                                <span class="text-blue-500 mt-1">•</span>
+                                Pérdida de fuerza y masa muscular
+                            </li>
+                            <li class="text-gray-700 flex gap-2 items-start">
+                                <span class="text-blue-500 mt-1">•</span>
+                                Lentitud en la marcha y fatiga fácil
+                            </li>
+                            <li class="text-gray-700 flex gap-2 items-start">
+                                <span class="text-blue-500 mt-1">•</span>
+                                Alta susceptibilidad a caídas y discapacidad
+                            </li>
+                            <li class="text-gray-700 flex gap-2 items-start">
+                                <span class="text-blue-500 mt-1">•</span>
+                                Estrechamente relacionada con sarcopenia y malnutrición
+                            </li>
+                            <li class="text-gray-700 flex gap-2 items-start">
+                                <span class="text-blue-500 mt-1">•</span>
+                                Predictor de hospitalización y mortalidad
+                            </li>
+                        </ul>
+                    </div>
+                    <div
+                        class="flex flex-col w-1/2 py-2 px-4 bg-white rounded-xl shadow"
+                    >
+                        <p class="text-lg text-gray-800 mb-4">Manejo</p>
+                        <ul class="flex flex-col gap-3">
+                            <li class="text-gray-700 flex gap-2 items-start">
+                                <span class="text-blue-500">•</span>
+                                Ejercicio multicomponente (fuerza, resistencia, equilibrio)
+                            </li>
+                            <li class="text-gray-700 flex gap-2 items-start">
+                                <span class="text-blue-500">•</span>
+                                Nutrición adecuada con aporte proteico
+                            </li>
+                            <li class="text-gray-700 flex gap-2 items-start">
+                                <span class="text-blue-500">•</span>
+                                Manejo de enfermedades crónicas y polifarmacia
+                            </li>
+                            <li class="text-gray-700 flex gap-2 items-start">
+                                <span class="text-blue-500">•</span>
+                                Programas de rehabilitación y fisioterapia
+                            </li>
+                            <li class="text-gray-700 flex gap-2 items-start">
+                                <span class="text-blue-500">•</span>
+                                Prevención de caídas y estimulación cognitiva
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Sección 3: Caídas -->
+        <div
+            class="procedimiento-seccion hidden flex flex-col md:flex-row gap-12 items-start px-5 md:px-0"
+        >
+            <div class="w-full md:w-1/2 flex flex-col items-center gap-6">
+                <img
+                    src="/src/resources/img/caidas.jpeg"
+                    alt="Prevención de caídas en adultos mayores"
+                    class="rounded-2xl shadow-md hover:shadow-xl transition-shadow duration-300 w-full object-cover max-w-2xl"
+                />
+            </div>
+            <div class="w-full md:w-1/2 flex flex-col gap-9">
+                <div
+                    class="bg-[#84b6f4]/10 p-4 border-l-4 border-[#84b6f4] rounded-xl shadow-sm"
+                >
+                    <h3 class="text-xl font-bold text-[#84b6f4] mb-1">
+                        Caídas
+                    </h3>
+                    <p class="text-gray-700">
+                        Evento frecuente en mayores, con consecuencias físicas
+                        (fracturas), psicológicas (miedo a caer) y sociales
+                        (pérdida de independencia).
+                    </p>
+                </div>
+                <div class="flex gap-6">
+                    <div
+                        class="flex flex-col w-1/2 py-2 px-4 bg-white rounded-xl shadow"
+                    >
+                        <p class="text-lg text-gray-800 mb-4">
+                            Características
+                        </p>
+                        <ul class="flex flex-col gap-3">
+                            <li class="text-gray-700 flex gap-2 items-start">
+                                <span class="text-blue-500 mt-1">•</span>
+                                Alta incidencia en mayores de 75 años
+                            </li>
+                            <li class="text-gray-700 flex gap-2 items-start">
+                                <span class="text-blue-500 mt-1">•</span>
+                                Multifactorial: alteraciones de la marcha, visión,
+                                fármacos
+                            </li>
+                            <li class="text-gray-700 flex gap-2 items-start">
+                                <span class="text-blue-500 mt-1">•</span>
+                                Riesgo de fractura de cadera y hospitalización
+                            </li>
+                            <li class="text-gray-700 flex gap-2 items-start">
+                                <span class="text-blue-500 mt-1">•</span>
+                                Puede desencadenar institucionalización
+                            </li>
+                            <li class="text-gray-700 flex gap-2 items-start">
+                                <span class="text-blue-500 mt-1">•</span>
+                                Asociadas a declive funcional progresivo
+                            </li>
+                        </ul>
+                    </div>
+                    <div
+                        class="flex flex-col w-1/2 py-2 px-4 bg-white rounded-xl shadow"
+                    >
+                        <p class="text-lg text-gray-800 mb-4">Manejo</p>
+                        <ul class="flex flex-col gap-3">
+                            <li class="text-gray-700 flex gap-2 items-start">
+                                <span class="text-blue-500">•</span>
+                                Evaluación multifactorial del riesgo
+                            </li>
+                            <li class="text-gray-700 flex gap-2 items-start">
+                                <span class="text-blue-500">•</span>
+                                Ejercicios de fuerza y balance
+                            </li>
+                            <li class="text-gray-700 flex gap-2 items-start">
+                                <span class="text-blue-500">•</span>
+                                Adecuar entorno domiciliario
+                            </li>
+                            <li class="text-gray-700 flex gap-2 items-start">
+                                <span class="text-blue-500">•</span>
+                                Uso correcto de ayudas técnicas
+                            </li>
+                            <li class="text-gray-700 flex gap-2 items-start">
+                                <span class="text-blue-500">•</span>
+                                Corrección de déficits sensoriales
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Sección 4: Polifarmacia -->
+        <div
+            class="procedimiento-seccion hidden flex flex-col md:flex-row gap-12 items-start px-5 md:px-0"
+        >
+            <div class="w-full md:w-1/2 flex flex-col items-center gap-6">
+                <img
+                    src="/src/resources/img/polifarmacia.png"
+                    alt="Medicamentos y polifarmacia"
+                    class="rounded-2xl shadow-md hover:shadow-xl transition-shadow duration-300 w-full object-cover max-w-2xl"
+                />
+            </div>
+            <div class="w-full md:w-1/2 flex flex-col gap-9">
+                <div
+                    class="bg-[#84b6f4]/10 p-4 border-l-4 border-[#84b6f4] rounded-xl shadow-sm"
+                >
+                    <h3 class="text-xl font-bold text-[#84b6f4] mb-1">
+                        Polifarmacia
+                    </h3>
+                    <p class="text-gray-700">
+                        Uso de múltiples fármacos, frecuente en geriatría, con
+                        alto riesgo de interacciones, caídas, delirium y
+                        hospitalizaciones.
+                    </p>
+                </div>
+                <div class="flex gap-6">
+                    <div
+                        class="flex flex-col w-1/2 py-2 px-4 bg-white rounded-xl shadow"
+                    >
+                        <p class="text-lg text-gray-800 mb-4">
+                            Características
+                        </p>
+                        <ul class="flex flex-col gap-3">
+                            <li class="text-gray-700 flex gap-2 items-start">
+                                <span class="text-blue-500 mt-1">•</span>
+                                Definida como ≥5 medicamentos
+                            </li>
+                            <li class="text-gray-700 flex gap-2 items-start">
+                                <span class="text-blue-500 mt-1">•</span>
+                                Riesgo de prescripción inadecuada
+                            </li>
+                            <li class="text-gray-700 flex gap-2 items-start">
+                                <span class="text-blue-500 mt-1">•</span>
+                                Asociada a reacciones adversas graves
+                            </li>
+                            <li class="text-gray-700 flex gap-2 items-start">
+                                <span class="text-blue-500 mt-1">•</span>
+                                Aumenta la carga terapéutica y errores de adherencia
+                            </li>
+                            <li class="text-gray-700 flex gap-2 items-start">
+                                <span class="text-blue-500 mt-1">•</span>
+                                Relacionada con deterioro cognitivo y funcional
+                            </li>
+                        </ul>
+                    </div>
+                    <div
+                        class="flex flex-col w-1/2 py-2 px-4 bg-white rounded-xl shadow"
+                    >
+                        <p class="text-lg text-gray-800 mb-4">Manejo</p>
+                        <ul class="flex flex-col gap-3">
+                            <li class="text-gray-700 flex gap-2 items-start">
+                                <span class="text-blue-500">•</span>
+                                Revisión periódica de la medicación (deprescripción)
+                            </li>
+                            <li class="text-gray-700 flex gap-2 items-start">
+                                <span class="text-blue-500">•</span>
+                                Uso de herramientas como criterios Beers
+                            </li>
+                            <li class="text-gray-700 flex gap-2 items-start">
+                                <span class="text-blue-500">•</span>
+                                Ajuste de dosis a función renal y hepática
+                            </li>
+                            <li class="text-gray-700 flex gap-2 items-start">
+                                <span class="text-blue-500">•</span>
+                                Simplificación de esquemas
+                            </li>
+                            <li class="text-gray-700 flex gap-2 items-start">
+                                <span class="text-blue-500">•</span>
+                                Educación al paciente y cuidador
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Sección 5: Malnutrición y Sarcopenia -->
+        <div
+            class="procedimiento-seccion hidden flex flex-col md:flex-row gap-12 items-start px-5 md:px-0"
+        >
+            <div class="w-full md:w-1/2 flex flex-col items-center gap-6">
+                <img
+                    src="/src/resources/img/malnutricion.jpeg"
+                    alt="Nutrición en adultos mayores"
+                    class="rounded-2xl shadow-md hover:shadow-xl transition-shadow duration-300 w-full object-cover max-w-2xl"
+                />
+            </div>
+            <div class="w-full md:w-1/2 flex flex-col gap-9">
+                <div
+                    class="bg-[#84b6f4]/10 p-4 border-l-4 border-[#84b6f4] rounded-xl shadow-sm"
+                >
+                    <h3 class="text-xl font-bold text-[#84b6f4] mb-1">
+                        Malnutrición y Sarcopenia
+                    </h3>
+                    <p class="text-gray-700">
+                        Alteración del estado nutricional y pérdida de
+                        masa/función muscular, frecuentes en la vejez, asociadas
+                        a fragilidad, caídas y peor pronóstico.
+                    </p>
+                </div>
+                <div class="flex gap-6">
+                    <div
+                        class="flex flex-col w-1/2 py-2 px-4 bg-white rounded-xl shadow"
+                    >
+                        <p class="text-lg text-gray-800 mb-4">
+                            Características
+                        </p>
+                        <ul class="flex flex-col gap-3">
+                            <li class="text-gray-700 flex gap-2 items-start">
+                                <span class="text-blue-500 mt-1">•</span>
+                                Pérdida de peso involuntaria
+                            </li>
+                            <li class="text-gray-700 flex gap-2 items-start">
+                                <span class="text-blue-500 mt-1">•</span>
+                                Disminución de masa y fuerza muscular
+                            </li>
+                            <li class="text-gray-700 flex gap-2 items-start">
+                                <span class="text-blue-500 mt-1">•</span>
+                                Relación directa con fragilidad y discapacidad
+                            </li>
+                            <li class="text-gray-700 flex gap-2 items-start">
+                                <span class="text-blue-500 mt-1">•</span>
+                                Asociada a depresión, disfagia y polifarmacia
+                            </li>
+                            <li class="text-gray-700 flex gap-2 items-start">
+                                <span class="text-blue-500 mt-1">•</span>
+                                Aumenta el riesgo de úlceras, infecciones y mortalidad
+                            </li>
+                        </ul>
+                    </div>
+                    <div
+                        class="flex flex-col w-1/2 py-2 px-4 bg-white rounded-xl shadow"
+                    >
+                        <p class="text-lg text-gray-800 mb-4">Manejo</p>
+                        <ul class="flex flex-col gap-3">
+                            <li class="text-gray-700 flex gap-2 items-start">
+                                <span class="text-blue-500">•</span>
+                                Detección con escalas (MNA, SARC-F)
+                            </li>
+                            <li class="text-gray-700 flex gap-2 items-start">
+                                <span class="text-blue-500">•</span>
+                                Dieta hiperproteica y suplementos nutricionales
+                            </li>
+                            <li class="text-gray-700 flex gap-2 items-start">
+                                <span class="text-blue-500">•</span>
+                                Estimulación del apetito y manejo de disfagia
+                            </li>
+                            <li class="text-gray-700 flex gap-2 items-start">
+                                <span class="text-blue-500">•</span>
+                                Ejercicio de resistencia y fuerza
+                            </li>
+                            <li class="text-gray-700 flex gap-2 items-start">
+                                <span class="text-blue-500">•</span>
+                                Intervención multidisciplinaria
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Sección 6: Deterioro cognitivo y demencia -->
+        <div
+            class="procedimiento-seccion hidden flex flex-col md:flex-row gap-12 items-start px-5 md:px-0"
+        >
+            <div class="w-full md:w-1/2 flex flex-col items-center gap-6">
+                <img
+                    src="/src/resources/img/demencia.jpeg"
+                    alt="Deterioro cognitivo en adultos mayores"
+                    class="rounded-2xl shadow-md hover:shadow-xl transition-shadow duration-300 w-full object-cover max-w-2xl"
+                />
+            </div>
+            <div class="w-full md:w-1/2 flex flex-col gap-9">
+                <div
+                    class="bg-[#84b6f4]/10 p-4 border-l-4 border-[#84b6f4] rounded-xl shadow-sm"
+                >
+                    <h3 class="text-xl font-bold text-[#84b6f4] mb-1">
+                        Deterioro cognitivo y demencia
+                    </h3>
+                    <p class="text-gray-700">
+                        Proceso neurodegenerativo progresivo (leve a severo) que
+                        afecta memoria, orientación y funcionalidad, con impacto
+                        en independencia y autocuidado.
+                    </p>
+                </div>
+                <div class="flex gap-6">
+                    <div
+                        class="flex flex-col w-1/2 py-2 px-4 bg-white rounded-xl shadow"
+                    >
+                        <p class="text-lg text-gray-800 mb-4">
+                            Características
+                        </p>
+                        <ul class="flex flex-col gap-3">
+                            <li class="text-gray-700 flex gap-2 items-start">
+                                <span class="text-blue-500 mt-1">•</span>
+                                Pérdida de memoria y funciones ejecutivas
+                            </li>
+                            <li class="text-gray-700 flex gap-2 items-start">
+                                <span class="text-blue-500 mt-1">•</span>
+                                Dificultad para realizar actividades instrumentales
+                            </li>
+                            <li class="text-gray-700 flex gap-2 items-start">
+                                <span class="text-blue-500 mt-1">•</span>
+                                Cambios conductuales y emocionales
+                            </li>
+                            <li class="text-gray-700 flex gap-2 items-start">
+                                <span class="text-blue-500 mt-1">•</span>
+                                Mayor dependencia progresiva
+                            </li>
+                            <li class="text-gray-700 flex gap-2 items-start">
+                                <span class="text-blue-500 mt-1">•</span>
+                                Factor de riesgo para delirium y polifarmacia
+                            </li>
+                        </ul>
+                    </div>
+                    <div
+                        class="flex flex-col w-1/2 py-2 px-4 bg-white rounded-xl shadow"
+                    >
+                        <p class="text-lg text-gray-800 mb-4">Manejo</p>
+                        <ul class="flex flex-col gap-3">
+                            <li class="text-gray-700 flex gap-2 items-start">
+                                <span class="text-blue-500">•</span>
+                                Evaluación con test cognitivos (MMSE, MoCA)
+                            </li>
+                            <li class="text-gray-700 flex gap-2 items-start">
+                                <span class="text-blue-500">•</span>
+                                Estimulación cognitiva y actividades significativas
+                            </li>
+                            <li class="text-gray-700 flex gap-2 items-start">
+                                <span class="text-blue-500">•</span>
+                                Educación y apoyo a cuidadores
+                            </li>
+                            <li class="text-gray-700 flex gap-2 items-start">
+                                <span class="text-blue-500">•</span>
+                                Manejo de comorbilidades y entorno seguro
+                            </li>
+                            <li class="text-gray-700 flex gap-2 items-start">
+                                <span class="text-blue-500">•</span>
+                                Fármacos en casos seleccionados
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Sección 7: Trastorno de la marcha -->
+        <div
+            class="procedimiento-seccion hidden flex flex-col md:flex-row gap-12 items-start px-5 md:px-0"
+        >
+            <div class="w-full md:w-1/2 flex flex-col items-center gap-6">
+                <img
+                    src="https://vanguardia.com.mx/binrepository/647x391/0c0/0d0/none/11604/TDIH/tercera_edad_mexico_VG3571563_MG562853.jpg"
+                    alt="Trastornos de la marcha en adultos mayores"
+                    class="rounded-2xl shadow-md hover:shadow-xl transition-shadow duration-300 w-full object-cover max-w-2xl"
+                />
+            </div>
+            <div class="w-full md:w-1/2 flex flex-col gap-9">
+                <div
+                    class="bg-[#84b6f4]/10 p-4 border-l-4 border-[#84b6f4] rounded-xl shadow-sm"
+                >
+                    <h3 class="text-xl font-bold text-[#84b6f4] mb-1">
+                        Trastorno de la marcha
+                    </h3>
+                    <p class="text-gray-700">
+                        Alteraciones en el patrón de la marcha, comunes en
+                        adultos mayores, asociadas a caídas, pérdida de
+                        independencia y fragilidad.
+                    </p>
+                </div>
+                <div class="flex gap-6">
+                    <div
+                        class="flex flex-col w-1/2 py-2 px-4 bg-white rounded-xl shadow"
+                    >
+                        <p class="text-lg text-gray-800 mb-4">
+                            Características
+                        </p>
+                        <ul class="flex flex-col gap-3">
+                            <li class="text-gray-700 flex gap-2 items-start">
+                                <span class="text-blue-500 mt-1">•</span>
+                                Marcha lenta y con base amplia
+                            </li>
+                            <li class="text-gray-700 flex gap-2 items-start">
+                                <span class="text-blue-500 mt-1">•</span>
+                                Inestabilidad y disminución del balance
+                            </li>
+                            <li class="text-gray-700 flex gap-2 items-start">
+                                <span class="text-blue-500 mt-1">•</span>
+                                Relación con sarcopenia, artrosis, neuropatías
+                            </li>
+                            <li class="text-gray-700 flex gap-2 items-start">
+                                <span class="text-blue-500 mt-1">•</span>
+                                Factor clave de caídas recurrentes
+                            </li>
+                            <li class="text-gray-700 flex gap-2 items-start">
+                                <span class="text-blue-500 mt-1">•</span>
+                                Limitación para actividades básicas
+                            </li>
+                        </ul>
+                    </div>
+                    <div
+                        class="flex flex-col w-1/2 py-2 px-4 bg-white rounded-xl shadow"
+                    >
+                        <p class="text-lg text-gray-800 mb-4">Manejo</p>
+                        <ul class="flex flex-col gap-3">
+                            <li class="text-gray-700 flex gap-2 items-start">
+                                <span class="text-blue-500">•</span>
+                                Evaluación funcional (Timed Up & Go)
+                            </li>
+                            <li class="text-gray-700 flex gap-2 items-start">
+                                <span class="text-blue-500">•</span>
+                                Rehabilitación y fisioterapia
+                            </li>
+                            <li class="text-gray-700 flex gap-2 items-start">
+                                <span class="text-blue-500">•</span>
+                                Ejercicios de fortalecimiento y equilibrio
+                            </li>
+                            <li class="text-gray-700 flex gap-2 items-start">
+                                <span class="text-blue-500">•</span>
+                                Dispositivos de ayuda (bastón, andador)
+                            </li>
+                            <li class="text-gray-700 flex gap-2 items-start">
+                                <span class="text-blue-500">•</span>
+                                Corrección de factores asociados
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Sección 8: Incontinencia urinaria y fecal -->
+        <div
+            class="procedimiento-seccion hidden flex flex-col md:flex-row gap-12 items-start px-5 md:px-0"
+        >
+            <div class="w-full md:w-1/2 flex flex-col items-center gap-6">
+                <img
+                    src="/src/resources/img/incontinencia.png"
+                    alt="Incontinencia en adultos mayores"
+                    class="rounded-2xl shadow-md hover:shadow-xl transition-shadow duration-300 w-full object-cover max-w-2xl"
+                />
+            </div>
+            <div class="w-full md:w-1/2 flex flex-col gap-9">
+                <div
+                    class="bg-[#84b6f4]/10 p-4 border-l-4 border-[#84b6f4] rounded-xl shadow-sm"
+                >
+                    <h3 class="text-xl font-bold text-[#84b6f4] mb-1">
+                        Incontinencia urinaria y fecal
+                    </h3>
+                    <p class="text-gray-700">
+                        Pérdida involuntaria de orina o heces, frecuente en
+                        geriatría, con impacto en autonomía, autoestima y riesgo
+                        de institucionalización.
+                    </p>
+                </div>
+                <div class="flex gap-6">
+                    <div
+                        class="flex flex-col w-1/2 py-2 px-4 bg-white rounded-xl shadow"
+                    >
+                        <p class="text-lg text-gray-800 mb-4">
+                            Características
+                        </p>
+                        <ul class="flex flex-col gap-3">
+                            <li class="text-gray-700 flex gap-2 items-start">
+                                <span class="text-blue-500 mt-1">•</span>
+                                Alta prevalencia en mujeres y mayores institucionalizados
+                            </li>
+                            <li class="text-gray-700 flex gap-2 items-start">
+                                <span class="text-blue-500 mt-1">•</span>
+                                Causa irritación cutánea y úlceras
+                            </li>
+                            <li class="text-gray-700 flex gap-2 items-start">
+                                <span class="text-blue-500 mt-1">•</span>
+                                Asociada a caídas nocturnas
+                            </li>
+                            <li class="text-gray-700 flex gap-2 items-start">
+                                <span class="text-blue-500 mt-1">•</span>
+                                Repercusión psicológica y social
+                            </li>
+                            <li class="text-gray-700 flex gap-2 items-start">
+                                <span class="text-blue-500 mt-1">•</span>
+                                Multifactorial: neurológica, funcional, medicamentos
+                            </li>
+                        </ul>
+                    </div>
+                    <div
+                        class="flex flex-col w-1/2 py-2 px-4 bg-white rounded-xl shadow"
+                    >
+                        <p class="text-lg text-gray-800 mb-4">Manejo</p>
+                        <ul class="flex flex-col gap-3">
+                            <li class="text-gray-700 flex gap-2 items-start">
+                                <span class="text-blue-500">•</span>
+                                Evaluación del tipo de incontinencia
+                            </li>
+                            <li class="text-gray-700 flex gap-2 items-start">
+                                <span class="text-blue-500">•</span>
+                                Entrenamiento vesical y ejercicios de Kegel
+                            </li>
+                            <li class="text-gray-700 flex gap-2 items-start">
+                                <span class="text-blue-500">•</span>
+                                Ajuste de fármacos que favorecen incontinencia
+                            </li>
+                            <li class="text-gray-700 flex gap-2 items-start">
+                                <span class="text-blue-500">•</span>
+                                Uso adecuado de absorbentes y dispositivos
+                            </li>
+                            <li class="text-gray-700 flex gap-2 items-start">
+                                <span class="text-blue-500">•</span>
+                                Manejo interdisciplinario
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Sección 9: Estreñimiento -->
+        <div
+            class="procedimiento-seccion hidden flex flex-col md:flex-row gap-12 items-start px-5 md:px-0"
+        >
+            <div class="w-full md:w-1/2 flex flex-col items-center gap-6">
+                <img
+                    src="/src/resources/img/estreñimiento.jpeg"
+                    alt="Salud digestiva en adultos mayores"
+                    class="rounded-2xl shadow-md hover:shadow-xl transition-shadow duration-300 w-full object-cover max-w-2xl"
+                />
+            </div>
+            <div class="w-full md:w-1/2 flex flex-col gap-9">
+                <div
+                    class="bg-[#84b6f4]/10 p-4 border-l-4 border-[#84b6f4] rounded-xl shadow-sm"
+                >
+                    <h3 class="text-xl font-bold text-[#84b6f4] mb-1">
+                        Estreñimiento
+                    </h3>
+                    <p class="text-gray-700">
+                        Disminución en la frecuencia o dificultad para evacuar,
+                        frecuente en mayores, asociada a polifarmacia,
+                        inmovilidad y dieta inadecuada.
+                    </p>
+                </div>
+                <div class="flex gap-6">
+                    <div
+                        class="flex flex-col w-1/2 py-2 px-4 bg-white rounded-xl shadow"
+                    >
+                        <p class="text-lg text-gray-800 mb-4">
+                            Características
+                        </p>
+                        <ul class="flex flex-col gap-3">
+                            <li class="text-gray-700 flex gap-2 items-start">
+                                <span class="text-blue-500 mt-1">•</span>
+                                Síntoma muy prevalente en adultos mayores
+                            </li>
+                            <li class="text-gray-700 flex gap-2 items-start">
+                                <span class="text-blue-500 mt-1">•</span>
+                                Causa de malestar, dolor abdominal y anorexia
+                            </li>
+                            <li class="text-gray-700 flex gap-2 items-start">
+                                <span class="text-blue-500 mt-1">•</span>
+                                Asociado a fármacos (opiáceos, anticolinérgicos)
+                            </li>
+                            <li class="text-gray-700 flex gap-2 items-start">
+                                <span class="text-blue-500 mt-1">•</span>
+                                Riesgo de fecaloma e incontinencia paradójica
+                            </li>
+                            <li class="text-gray-700 flex gap-2 items-start">
+                                <span class="text-blue-500 mt-1">•</span>
+                                Impacta en calidad de vida
+                            </li>
+                        </ul>
+                    </div>
+                    <div
+                        class="flex flex-col w-1/2 py-2 px-4 bg-white rounded-xl shadow"
+                    >
+                        <p class="text-lg text-gray-800 mb-4">Manejo</p>
+                        <ul class="flex flex-col gap-3">
+                            <li class="text-gray-700 flex gap-2 items-start">
+                                <span class="text-blue-500">•</span>
+                                Educación en hábitos intestinales
+                            </li>
+                            <li class="text-gray-700 flex gap-2 items-start">
+                                <span class="text-blue-500">•</span>
+                                Dieta rica en fibra y líquidos
+                            </li>
+                            <li class="text-gray-700 flex gap-2 items-start">
+                                <span class="text-blue-500">•</span>
+                                Promover actividad física regular
+                            </li>
+                            <li class="text-gray-700 flex gap-2 items-start">
+                                <span class="text-blue-500">•</span>
+                                Evitar fármacos estreñidores cuando sea posible
+                            </li>
+                            <li class="text-gray-700 flex gap-2 items-start">
+                                <span class="text-blue-500">•</span>
+                                Uso racional de laxantes según necesidad
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Sección 10: Úlceras por presión -->
+        <div
+            class="procedimiento-seccion hidden flex flex-col md:flex-row gap-12 items-start px-5 md:px-0"
+        >
+            <div class="w-full md:w-1/2 flex flex-col items-center gap-6">
+                <img
+                    src="/src/resources/img/ulceras.jpeg"
+                    alt="Cuidado de la piel en adultos mayores"
+                    class="rounded-2xl shadow-md hover:shadow-xl transition-shadow duration-300 w-full object-cover max-w-2xl"
+                />
+            </div>
+            <div class="w-full md:w-1/2 flex flex-col gap-9">
+                <div
+                    class="bg-[#84b6f4]/10 p-4 border-l-4 border-[#84b6f4] rounded-xl shadow-sm"
+                >
+                    <h3 class="text-xl font-bold text-[#84b6f4] mb-1">
+                        Úlceras por presión
+                    </h3>
+                    <p class="text-gray-700">
+                        Lesiones cutáneas por presión prolongada en puntos de
+                        apoyo, asociadas a inmovilidad, malnutrición y
+                        fragilidad.
+                    </p>
+                </div>
+                <div class="flex gap-6">
+                    <div
+                        class="flex flex-col w-1/2 py-2 px-4 bg-white rounded-xl shadow"
+                    >
+                        <p class="text-lg text-gray-800 mb-4">
+                            Características
+                        </p>
+                        <ul class="flex flex-col gap-3">
+                            <li class="text-gray-700 flex gap-2 items-start">
+                                <span class="text-blue-500 mt-1">•</span>
+                                Alta prevalencia en encamados
+                            </li>
+                            <li class="text-gray-700 flex gap-2 items-start">
+                                <span class="text-blue-500 mt-1">•</span>
+                                Progresan por estadios (I a IV)
+                            </li>
+                            <li class="text-gray-700 flex gap-2 items-start">
+                                <span class="text-blue-500 mt-1">•</span>
+                                Riesgo de infección local y sepsis
+                            </li>
+                            <li class="text-gray-700 flex gap-2 items-start">
+                                <span class="text-blue-500 mt-1">•</span>
+                                Asociadas a dolor y pérdida funcional
+                            </li>
+                            <li class="text-gray-700 flex gap-2 items-start">
+                                <span class="text-blue-500 mt-1">•</span>
+                                Prevención más eficaz que tratamiento
+                            </li>
+                        </ul>
+                    </div>
+                    <div
+                        class="flex flex-col w-1/2 py-2 px-4 bg-white rounded-xl shadow"
+                    >
+                        <p class="text-lg text-gray-800 mb-4">Manejo</p>
+                        <ul class="flex flex-col gap-3">
+                            <li class="text-gray-700 flex gap-2 items-start">
+                                <span class="text-blue-500">•</span>
+                                Cambios posturales regulares
+                            </li>
+                            <li class="text-gray-700 flex gap-2 items-start">
+                                <span class="text-blue-500">•</span>
+                                Colchones y superficies antiescaras
+                            </li>
+                            <li class="text-gray-700 flex gap-2 items-start">
+                                <span class="text-blue-500">•</span>
+                                Nutrición adecuada (proteínas, vitaminas)
+                            </li>
+                            <li class="text-gray-700 flex gap-2 items-start">
+                                <span class="text-blue-500">•</span>
+                                Higiene e hidratación de la piel
+                            </li>
+                            <li class="text-gray-700 flex gap-2 items-start">
+                                <span class="text-blue-500">•</span>
+                                Curaciones y tratamiento de complicaciones
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Sección 11: Trastornos del sueño -->
+        <div
+            class="procedimiento-seccion hidden flex flex-col md:flex-row gap-12 items-start px-5 md:px-0"
+        >
+            <div class="w-full md:w-1/2 flex flex-col items-center gap-6">
+                <img
+                    src="/src/resources/img/insomnio.jpeg"
+                    alt="Trastornos del sueño en adultos mayores"
+                    class="rounded-2xl shadow-md hover:shadow-xl transition-shadow duration-300 w-full object-cover max-w-2xl"
+                />
+            </div>
+            <div class="w-full md:w-1/2 flex flex-col gap-9">
+                <div
+                    class="bg-[#84b6f4]/10 p-4 border-l-4 border-[#84b6f4] rounded-xl shadow-sm"
+                >
+                    <h3 class="text-xl font-bold text-[#84b6f4] mb-1">
+                        Trastornos del sueño (Insomnio)
+                    </h3>
+                    <p class="text-gray-700">
+                        Alteraciones en la conciliación o mantenimiento del
+                        sueño, frecuentes en la vejez y asociadas a deterioro
+                        funcional, cognitivo y anímico.
+                    </p>
+                </div>
+                <div class="flex gap-6">
+                    <div
+                        class="flex flex-col w-1/2 py-2 px-4 bg-white rounded-xl shadow"
+                    >
+                        <p class="text-lg text-gray-800 mb-4">
+                            Características
+                        </p>
+                        <ul class="flex flex-col gap-3">
+                            <li class="text-gray-700 flex gap-2 items-start">
+                                <span class="text-blue-500 mt-1">•</span>
+                                Dificultad para conciliar o mantener el sueño
+                            </li>
+                            <li class="text-gray-700 flex gap-2 items-start">
+                                <span class="text-blue-500 mt-1">•</span>
+                                Sueño fragmentado y de menor calidad
+                            </li>
+                            <li class="text-gray-700 flex gap-2 items-start">
+                                <span class="text-blue-500 mt-1">•</span>
+                                Asociado a depresión, dolor y polifarmacia
+                            </li>
+                            <li class="text-gray-700 flex gap-2 items-start">
+                                <span class="text-blue-500 mt-1">•</span>
+                                Incrementa riesgo de caídas y deterioro cognitivo
+                            </li>
+                            <li class="text-gray-700 flex gap-2 items-start">
+                                <span class="text-blue-500 mt-1">•</span>
+                                Impacto en calidad de vida y funcionalidad
+                            </li>
+                        </ul>
+                    </div>
+                    <div
+                        class="flex flex-col w-1/2 py-2 px-4 bg-white rounded-xl shadow"
+                    >
+                        <p class="text-lg text-gray-800 mb-4">Manejo</p>
+                        <ul class="flex flex-col gap-3">
+                            <li class="text-gray-700 flex gap-2 items-start">
+                                <span class="text-blue-500">•</span>
+                                Higiene del sueño (rutinas regulares)
+                            </li>
+                            <li class="text-gray-700 flex gap-2 items-start">
+                                <span class="text-blue-500">•</span>
+                                Ejercicio y exposición a luz natural
+                            </li>
+                            <li class="text-gray-700 flex gap-2 items-start">
+                                <span class="text-blue-500">•</span>
+                                Evitar estimulantes (cafeína, alcohol)
+                            </li>
+                            <li class="text-gray-700 flex gap-2 items-start">
+                                <span class="text-blue-500">•</span>
+                                Revisión de fármacos que afectan el sueño
+                            </li>
+                            <li class="text-gray-700 flex gap-2 items-start">
+                                <span class="text-blue-500">•</span>
+                                Uso prudente de hipnóticos en casos seleccionados
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Sección 12: Alteraciones sensoriales -->
+        <div
+            class="procedimiento-seccion hidden flex flex-col md:flex-row gap-12 items-start px-5 md:px-0"
+        >
+            <div class="w-full md:w-1/2 flex flex-col items-center gap-6">
+                <img
+                    src="/src/resources/img/sordera.jpeg"
+                    alt="Alteraciones sensoriales en adultos mayores"
+                    class="rounded-2xl shadow-md hover:shadow-xl transition-shadow duration-300 w-full object-cover max-w-2xl"
+                />
+            </div>
+            <div class="w-full md:w-1/2 flex flex-col gap-9">
+                <div
+                    class="bg-[#84b6f4]/10 p-4 border-l-4 border-[#84b6f4] rounded-xl shadow-sm"
+                >
+                    <h3 class="text-xl font-bold text-[#84b6f4] mb-1">
+                        Alteraciones sensoriales (audición y visión)
+                    </h3>
+                    <p class="text-gray-700">
+                        Déficits visuales y auditivos comunes en adultos
+                        mayores, que limitan la comunicación, aumentan el
+                        aislamiento y la discapacidad.
+                    </p>
+                </div>
+                <div class="flex gap-6">
+                    <div
+                        class="flex flex-col w-1/2 py-2 px-4 bg-white rounded-xl shadow"
+                    >
+                        <p class="text-lg text-gray-800 mb-4">
+                            Características
+                        </p>
+                        <ul class="flex flex-col gap-3">
+                            <li class="text-gray-700 flex gap-2 items-start">
+                                <span class="text-blue-500 mt-1">•</span>
+                                Presbiacusia (pérdida auditiva por edad)
+                            </li>
+                            <li class="text-gray-700 flex gap-2 items-start">
+                                <span class="text-blue-500 mt-1">•</span>
+                                Presbicia, cataratas, degeneración macular
+                            </li>
+                            <li class="text-gray-700 flex gap-2 items-start">
+                                <span class="text-blue-500 mt-1">•</span>
+                                Mayor riesgo de caídas y accidentes
+                            </li>
+                            <li class="text-gray-700 flex gap-2 items-start">
+                                <span class="text-blue-500 mt-1">•</span>
+                                Contribuyen a depresión y aislamiento social
+                            </li>
+                            <li class="text-gray-700 flex gap-2 items-start">
+                                <span class="text-blue-500 mt-1">•</span>
+                                Impacto negativo en la adherencia a tratamientos
+                            </li>
+                        </ul>
+                    </div>
+                    <div
+                        class="flex flex-col w-1/2 py-2 px-4 bg-white rounded-xl shadow"
+                    >
+                        <p class="text-lg text-gray-800 mb-4">Manejo</p>
+                        <ul class="flex flex-col gap-3">
+                            <li class="text-gray-700 flex gap-2 items-start">
+                                <span class="text-blue-500">•</span>
+                                Tamizaje rutinario de visión y audición
+                            </li>
+                            <li class="text-gray-700 flex gap-2 items-start">
+                                <span class="text-blue-500">•</span>
+                                Corrección con lentes, audífonos o cirugía
+                            </li>
+                            <li class="text-gray-700 flex gap-2 items-start">
+                                <span class="text-blue-500">•</span>
+                                Adecuar el entorno (buena iluminación)
+                            </li>
+                            <li class="text-gray-700 flex gap-2 items-start">
+                                <span class="text-blue-500">•</span>
+                                Educación sobre comunicación efectiva
+                            </li>
+                            <li class="text-gray-700 flex gap-2 items-start">
+                                <span class="text-blue-500">•</span>
+                                Estimulación cognitiva y social
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Sección 13: Dolor -->
+        <div
+            class="procedimiento-seccion hidden flex flex-col md:flex-row gap-12 items-start px-5 md:px-0"
+        >
+            <div class="w-full md:w-1/2 flex flex-col items-center gap-6">
+                <img
+                    src="/src/resources/img/dolor.jpeg"
+                    alt="Manejo del dolor en adultos mayores"
+                    class="rounded-2xl shadow-md hover:shadow-xl transition-shadow duration-300 w-full object-cover max-w-2xl"
+                />
+            </div>
+            <div class="w-full md:w-1/2 flex flex-col gap-9">
+                <div
+                    class="bg-[#84b6f4]/10 p-4 border-l-4 border-[#84b6f4] rounded-xl shadow-sm"
+                >
+                    <h3 class="text-xl font-bold text-[#84b6f4] mb-1">
+                        Dolor (agudo y crónico)
+                    </h3>
+                    <p class="text-gray-700">
+                        Síntoma muy prevalente en geriatría, frecuentemente
+                        subdiagnosticado, con gran impacto en funcionalidad,
+                        ánimo y sueño.
+                    </p>
+                </div>
+                <div class="flex gap-6">
+                    <div
+                        class="flex flex-col w-1/2 py-2 px-4 bg-white rounded-xl shadow"
+                    >
+                        <p class="text-lg text-gray-800 mb-4">
+                            Características
+                        </p>
+                        <ul class="flex flex-col gap-3">
+                            <li class="text-gray-700 flex gap-2 items-start">
+                                <span class="text-blue-500 mt-1">•</span>
+                                Frecuente en artrosis, neuropatías y cáncer
+                            </li>
+                            <li class="text-gray-700 flex gap-2 items-start">
+                                <span class="text-blue-500 mt-1">•</span>
+                                Puede ser nociceptivo o neuropático
+                            </li>
+                            <li class="text-gray-700 flex gap-2 items-start">
+                                <span class="text-blue-500 mt-1">•</span>
+                                Asociado a depresión, insomnio y limitación funcional
+                            </li>
+                            <li class="text-gray-700 flex gap-2 items-start">
+                                <span class="text-blue-500 mt-1">•</span>
+                                Aumenta la dependencia y fragilidad
+                            </li>
+                            <li class="text-gray-700 flex gap-2 items-start">
+                                <span class="text-blue-500 mt-1">•</span>
+                                Riesgo de abuso o complicaciones con analgésicos
+                            </li>
+                        </ul>
+                    </div>
+                    <div
+                        class="flex flex-col w-1/2 py-2 px-4 bg-white rounded-xl shadow"
+                    >
+                        <p class="text-lg text-gray-800 mb-4">Manejo</p>
+                        <ul class="flex flex-col gap-3">
+                            <li class="text-gray-700 flex gap-2 items-start">
+                                <span class="text-blue-500">•</span>
+                                Evaluación multidimensional del dolor
+                            </li>
+                            <li class="text-gray-700 flex gap-2 items-start">
+                                <span class="text-blue-500">•</span>
+                                Analgésicos según escalera de la OMS
+                            </li>
+                            <li class="text-gray-700 flex gap-2 items-start">
+                                <span class="text-blue-500">•</span>
+                                Terapias no farmacológicas
+                            </li>
+                            <li class="text-gray-700 flex gap-2 items-start">
+                                <span class="text-blue-500">•</span>
+                                Ajustar tratamiento a función renal/hepática
+                            </li>
+                            <li class="text-gray-700 flex gap-2 items-start">
+                                <span class="text-blue-500">•</span>
+                                Acompañamiento psicológico y soporte emocional
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Sección 14: Limitación funcional -->
+        <div
+            class="procedimiento-seccion hidden flex flex-col md:flex-row gap-12 items-start px-5 md:px-0"
+        >
+            <div class="w-full md:w-1/2 flex flex-col items-center gap-6">
+                <img
+                    src="/src/resources/img/movilidad.jpeg"
+                    alt="Limitación funcional en adultos mayores"
+                    class="rounded-2xl shadow-md hover:shadow-xl transition-shadow duration-300 w-full object-cover max-w-2xl"
+                />
+            </div>
+            <div class="w-full md:w-1/2 flex flex-col gap-9">
+                <div
+                    class="bg-[#84b6f4]/10 p-4 border-l-4 border-[#84b6f4] rounded-xl shadow-sm"
+                >
+                    <h3 class="text-xl font-bold text-[#84b6f4] mb-1">
+                        Limitación funcional o dismovilidad
+                    </h3>
+                    <p class="text-gray-700">
+                        Pérdida parcial o total de la capacidad para realizar
+                        actividades básicas e instrumentales de la vida diaria.
+                    </p>
+                </div>
+                <div class="flex gap-6">
+                    <div
+                        class="flex flex-col w-1/2 py-2 px-4 bg-white rounded-xl shadow"
+                    >
+                        <p class="text-lg text-gray-800 mb-4">
+                            Características
+                        </p>
+                        <ul class="flex flex-col gap-3">
+                            <li class="text-gray-700 flex gap-2 items-start">
+                                <span class="text-blue-500 mt-1">•</span>
+                                Evaluada con escalas (Barthel, Katz, Lawton)
+                            </li>
+                            <li class="text-gray-700 flex gap-2 items-start">
+                                <span class="text-blue-500 mt-1">•</span>
+                                Multifactorial: fragilidad, caídas, deterioro cognitivo
+                            </li>
+                            <li class="text-gray-700 flex gap-2 items-start">
+                                <span class="text-blue-500 mt-1">•</span>
+                                Se traduce en dependencia progresiva
+                            </li>
+                            <li class="text-gray-700 flex gap-2 items-start">
+                                <span class="text-blue-500 mt-1">•</span>
+                                Impacto en la calidad de vida y necesidad de cuidados
+                            </li>
+                            <li class="text-gray-700 flex gap-2 items-start">
+                                <span class="text-blue-500 mt-1">•</span>
+                                Riesgo de institucionalización
+                            </li>
+                        </ul>
+                    </div>
+                    <div
+                        class="flex flex-col w-1/2 py-2 px-4 bg-white rounded-xl shadow"
+                    >
+                        <p class="text-lg text-gray-800 mb-4">Manejo</p>
+                        <ul class="flex flex-col gap-3">
+                            <li class="text-gray-700 flex gap-2 items-start">
+                                <span class="text-blue-500">•</span>
+                                Valoración geriátrica integral (VGI)
+                            </li>
+                            <li class="text-gray-700 flex gap-2 items-start">
+                                <span class="text-blue-500">•</span>
+                                Rehabilitación física y terapia ocupacional
+                            </li>
+                            <li class="text-gray-700 flex gap-2 items-start">
+                                <span class="text-blue-500">•</span>
+                                Adaptación del entorno y ayudas técnicas
+                            </li>
+                            <li class="text-gray-700 flex gap-2 items-start">
+                                <span class="text-blue-500">•</span>
+                                Prevención de síndromes geriátricos asociados
+                            </li>
+                            <li class="text-gray-700 flex gap-2 items-start">
+                                <span class="text-blue-500">•</span>
+                                Intervenciones multidisciplinarias
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Sección 15: Depresión -->
+        <div
+            class="procedimiento-seccion hidden flex flex-col md:flex-row gap-12 items-start px-5 md:px-0"
+        >
+            <div class="w-full md:w-1/2 flex flex-col items-center gap-6">
+                <img
+                    src="/src/resources/img/depresion.jpg"
+                    alt="Depresión en adultos mayores"
+                    class="rounded-2xl shadow-md hover:shadow-xl transition-shadow duration-300 w-full object-cover max-w-2xl"
+                />
+            </div>
+            <div class="w-full md:w-1/2 flex flex-col gap-9">
+                <div
+                    class="bg-[#84b6f4]/10 p-4 border-l-4 border-[#84b6f4] rounded-xl shadow-sm"
+                >
+                    <h3 class="text-xl font-bold text-[#84b6f4] mb-1">
+                        Depresión y otros trastornos afectivos
+                    </h3>
+                    <p class="text-gray-700">
+                        Alteraciones emocionales muy prevalentes en adultos
+                        mayores, a menudo infradiagnosticadas, con repercusión
+                        en funcionalidad y salud general.
+                    </p>
+                </div>
+                <div class="flex gap-6">
+                    <div
+                        class="flex flex-col w-1/2 py-2 px-4 bg-white rounded-xl shadow"
+                    >
+                        <p class="text-lg text-gray-800 mb-4">
+                            Características
+                        </p>
+                        <ul class="flex flex-col gap-3">
+                            <li class="text-gray-700 flex gap-2 items-start">
+                                <span class="text-blue-500 mt-1">•</span>
+                                Síntomas atípicos (apatía, aislamiento, quejas somáticas)
+                            </li>
+                            <li class="text-gray-700 flex gap-2 items-start">
+                                <span class="text-blue-500 mt-1">•</span>
+                                Asociada a pérdida funcional y cognitiva
+                            </li>
+                            <li class="text-gray-700 flex gap-2 items-start">
+                                <span class="text-blue-500 mt-1">•</span>
+                                Incrementa riesgo de suicidio en mayores
+                            </li>
+                            <li class="text-gray-700 flex gap-2 items-start">
+                                <span class="text-blue-500 mt-1">•</span>
+                                Frecuente comorbilidad con insomnio y dolor
+                            </li>
+                            <li class="text-gray-700 flex gap-2 items-start">
+                                <span class="text-blue-500 mt-1">•</span>
+                                Impacta en adherencia terapéutica
+                            </li>
+                        </ul>
+                    </div>
+                    <div
+                        class="flex flex-col w-1/2 py-2 px-4 bg-white rounded-xl shadow"
+                    >
+                        <p class="text-lg text-gray-800 mb-4">Manejo</p>
+                        <ul class="flex flex-col gap-3">
+                            <li class="text-gray-700 flex gap-2 items-start">
+                                <span class="text-blue-500">•</span>
+                                Detección temprana con escalas (GDS, PHQ-9)
+                            </li>
+                            <li class="text-gray-700 flex gap-2 items-start">
+                                <span class="text-blue-500">•</span>
+                                Psicoterapia y acompañamiento social
+                            </li>
+                            <li class="text-gray-700 flex gap-2 items-start">
+                                <span class="text-blue-500">•</span>
+                                Actividad física y estimulación social
+                            </li>
+                            <li class="text-gray-700 flex gap-2 items-start">
+                                <span class="text-blue-500">•</span>
+                                Antidepresivos en casos moderados-graves
+                            </li>
+                            <li class="text-gray-700 flex gap-2 items-start">
+                                <span class="text-blue-500">•</span>
+                                Apoyo y educación a familiares/cuidadores
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Sección 16: Multimorbilidad -->
+        <div
+            class="procedimiento-seccion hidden flex flex-col md:flex-row gap-12 items-start px-5 md:px-0"
+        >
+            <div class="w-full md:w-1/2 flex flex-col items-center gap-6">
+                <img
+                    src="/src/resources/img/multimorbilidad.jpg"
+                    alt="Multimorbilidad en adultos mayores"
+                    class="rounded-2xl shadow-md hover:shadow-xl transition-shadow duration-300 w-full object-cover max-w-2xl"
+                />
+            </div>
+            <div class="w-full md:w-1/2 flex flex-col gap-9">
+                <div
+                    class="bg-[#84b6f4]/10 p-4 border-l-4 border-[#84b6f4] rounded-xl shadow-sm"
+                >
+                    <h3 class="text-xl font-bold text-[#84b6f4] mb-1">
+                        Multimorbilidad
+                    </h3>
+                    <p class="text-gray-700">
+                        Presencia simultánea de ≥2 enfermedades crónicas
+                        activas, con gran impacto en la calidad de vida,
+                        polifarmacia y complejidad de manejo.
+                    </p>
+                </div>
+                <div class="flex gap-6">
+                    <div
+                        class="flex flex-col w-1/2 py-2 px-4 bg-white rounded-xl shadow"
+                    >
+                        <p class="text-lg text-gray-800 mb-4">
+                            Características
+                        </p>
+                        <ul class="flex flex-col gap-3">
+                            <li class="text-gray-700 flex gap-2 items-start">
+                                <span class="text-blue-500 mt-1">•</span>
+                                Muy frecuente en adultos mayores
+                            </li>
+                            <li class="text-gray-700 flex gap-2 items-start">
+                                <span class="text-blue-500 mt-1">•</span>
+                                Aumenta la complejidad terapéutica
+                            </li>
+                            <li class="text-gray-700 flex gap-2 items-start">
+                                <span class="text-blue-500 mt-1">•</span>
+                                Se relaciona con fragilidad y polifarmacia
+                            </li>
+                            <li class="text-gray-700 flex gap-2 items-start">
+                                <span class="text-blue-500 mt-1">•</span>
+                                Mayor riesgo de hospitalización y mortalidad
+                            </li>
+                            <li class="text-gray-700 flex gap-2 items-start">
+                                <span class="text-blue-500 mt-1">•</span>
+                                Dificultad para mantener adherencia a tratamientos
+                            </li>
+                        </ul>
+                    </div>
+                    <div
+                        class="flex flex-col w-1/2 py-2 px-4 bg-white rounded-xl shadow"
+                    >
+                        <p class="text-lg text-gray-800 mb-4">Manejo</p>
+                        <ul class="flex flex-col gap-3">
+                            <li class="text-gray-700 flex gap-2 items-start">
+                                <span class="text-blue-500">•</span>
+                                Abordaje centrado en la persona
+                            </li>
+                            <li class="text-gray-700 flex gap-2 items-start">
+                                <span class="text-blue-500">•</span>
+                                Coordinación de cuidados interdisciplinarios
+                            </li>
+                            <li class="text-gray-700 flex gap-2 items-start">
+                                <span class="text-blue-500">•</span>
+                                Priorización de objetivos terapéuticos
+                            </li>
+                            <li class="text-gray-700 flex gap-2 items-start">
+                                <span class="text-blue-500">•</span>
+                                Deprescripción y simplificación de tratamientos
+                            </li>
+                            <li class="text-gray-700 flex gap-2 items-start">
+                                <span class="text-blue-500">•</span>
+                                Educación a paciente y familia sobre autocuidado
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </section>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        const botones = document.querySelectorAll(".btn-procedimiento");
+        const secciones = document.querySelectorAll(".procedimiento-seccion");
+
+        secciones.forEach((sec, i) => sec.classList.toggle("hidden", i !== 0));
+        botones.forEach((btn, i) =>
+            btn.classList.toggle("bg-blue-400", i === 0),
+        );
+
+        botones.forEach((button, index) => {
+            button.addEventListener("click", () => {
+                secciones.forEach((sec, i) =>
+                    sec.classList.toggle("hidden", i !== index),
+                );
+                botones.forEach((btn, i) =>
+                    btn.classList.toggle("bg-blue-200", i === index),
+                );
+            });
+        });
+
+        const carousel = document.getElementById("carousel");
+        //@ts-ignore
+        document.getElementById("btn-left").addEventListener("click", () => {
+            //@ts-ignore
+            carousel.scrollBy({ left: -150, behavior: "smooth" });
+        });
+        //@ts-ignore
+        document.getElementById("btn-right").addEventListener("click", () => {
+            //@ts-ignore
+            carousel.scrollBy({ left: 150, behavior: "smooth" });
+        });
+    });
+</script>
