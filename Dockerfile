@@ -4,7 +4,7 @@ WORKDIR /app
 FROM base AS install
 USER root
 
-COPY ./package.json ./bun.lockb ./astro.config.mjs ./tailwind.config.js ./tsconfig.json ./
+COPY ./package.json ./bun.lock ./astro.config.mjs ./tailwind.config.js ./tsconfig.json ./
 COPY ./src ./src
 COPY ./public ./public
 
