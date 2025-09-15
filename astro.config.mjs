@@ -1,5 +1,4 @@
 import bun from 'astro-bun-adapter';
-import tailwind from '@astrojs/tailwind';
 import { defineConfig } from 'astro/config';
 
 // https://astro.build/config
@@ -12,7 +11,6 @@ export default defineConfig({
     prefetch: false,
     adapter: bun(),
     integrations: [
-        tailwind(),
     ],
     devToolbar: {
         enabled: false,
