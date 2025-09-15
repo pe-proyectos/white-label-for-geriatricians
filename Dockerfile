@@ -1,36 +1,22 @@
-# Use Ubuntu slim as base image
-FROM ubuntu:22.04-slim
-
-# Set environment variables
-ENV DEBIAN_FRONTEND=noninteractive
-
-# Install curl and ca-certificates
-RUN apt-get update && \
-    apt-get install -y curl ca-certificates && \
-    apt-get clean && \
-    rm -rf /var/lib/apt/lists/*
-
-# Install Bun
-RUN curl -fsSL https://bun.sh/install | bash
-ENV PATH="/root/.bun/bin:$PATH"
-
-# Create app directory
+FROM oven/bun:canary-debian as base
 WORKDIR /app
 
-# Copy package files and lock file
-COPY package.json bun.lock ./
+FROM base AS install
+USER root
+
+COPY ./package.json ./bun.lockb ./astro.config.mjs ./tailwind.config.js ./tsconfig.json ./
+COPY ./src ./src
+COPY ./public ./public
 
 # Install dependencies
-RUN bun install --frozen-lockfile
+RUN bun install
 
-# Copy source code
-COPY . .
+FROM base AS release
+USER root
 
-# Build the Astro application
-RUN bun run build
+COPY --from=install /app/ .
+ENV HOST=0.0.0.0
+ENV PORT=4325
+EXPOSE 4325
 
-# Expose port 4321 (Astro's default preview port)
-EXPOSE 4321
-
-# Start the application in preview mode
-CMD ["bun", "run", "preview", "--", "--host", "0.0.0.0"]
+CMD bunx --bun astro build && bun run ./dist/server/entry.mjs
