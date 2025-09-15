@@ -2,12 +2,35 @@
 import Footersection from "../components/Footersection.astro";
 import Navbar from "../components/Navbar.astro";
 ---
+
 <!doctype html>
-<html lang="en">
+<html lang="es">
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>Dr. Juan Jambo</title>
+		<meta
+			name="description"
+			content="Dr. Juan Andrés Jambo Mendoza - Geriatra Especialista en Jaén y Bagua. Experto en salud y bienestar del adulto mayor. Atención médica integral, personalizada y de calidad para un envejecimiento saludable y pleno. Consultas especializadas en geriatría."
+		/>
+		<meta
+			name="keywords"
+			content="geriatra, médico adulto mayor, especialista tercera edad, geriatría, medicina geriátrica, salud adulto mayor, bienestar ancianos, envejecimiento saludable, atención médica, consulta médica, valoración geriátrica, cuidado adulto mayor, medicina preventiva, salud integral, bienestar, longevidad, calidad de vida, Jaén, Bagua, Cajamarca, Chiclayo, Amazonas, Juan Jambo Mendoza"
+		/>
+		<meta name="author" content="Dr. Juan Andrés Jambo Mendoza" />
+		<meta
+			property="og:title"
+			content="Dr. Juan Andrés Jambo Mendoza - Geriatra"
+		/>
+		<meta
+			property="og:description"
+			content="Dr. Juan Andrés Jambo Mendoza - Geriatra Especialista en Jaén y Bagua. Experto en salud y bienestar del adulto mayor. Atención médica integral, personalizada y de calidad para un envejecimiento saludable y pleno. Consultas especializadas en geriatría."
+		/>
+		<meta property="og:image" content="/src/resources/img/drjuan_3.jpg" />
+		<meta property="og:type" content="website" />
+		<meta property="og:url" content="https://geriatrajuanjambo.com" />
+		<link rel="icon" type="image/png" sizes="32x32" href="/src/resources/img/favicon-32x32.png">
+		<link rel="icon" type="image/png" sizes="16x16" href="/src/resources/img/favicon-16x16.png">
+		<title>Dr. Juan Jambo Mendoza | Geriatra</title>
 		<script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"
 		></script>
 		<link
@@ -28,6 +51,6 @@ import Navbar from "../components/Navbar.astro";
 		<main>
 			<slot />
 		</main>
-		<Footersection/>
+		<Footersection />
 	</body>
 </html>

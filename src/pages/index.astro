@@ -11,14 +11,14 @@ import Sindromesseccion from "../components/Sindromesseccion.astro";
 ---
 
 <Layout>
-	<section class="bg-gray-100">
-		<div class="flex px-19 pt-26 py-10">
-			<div class="flex flex-col w-1/2 pr-35">
-				<h2 class="text-6xl font-bold text-[#84b6f4]">
-					Cuidamos <span class="text-gray-800">de Quienes</span>
-					Más Amas
+	<section class="bg-gray-100  ">
+		<div class=" flex flex-col md:flex-row px-5  md:px-19 pt-26 py-10  ">
+			<div class="flex flex-col md:w-1/2 md:pr-35">
+				<h2 class="text-4xl md:text-6xl font-bold text-gray-800 pr-4 md:pr-0 ">
+					Cuidamos de  <span class=" text-[#84b6f4]">Quienes Más</span>
+					Amas
 				</h2>
-				<p class="text-xl text-gray-600 my-5">
+				<p class="md:text-xl text-gray-600 my-5">
 					Cuidando de tu salud y bienestar en cada etapa de la vida.
 					Atención profesional, humana y cercana.
 				</p>
@@ -61,17 +61,15 @@ import Sindromesseccion from "../components/Sindromesseccion.astro";
 					>Solicitar Consulta Geriátrica</a
 				>
 			</div>
-			<div class="flex w-1/2 justify-center">
-				<div
-					class="bg-[#84b6f4]/70 w-80 h-80 rounded-full relative top-19 right-1"
-				>
-				</div>
-				<img
-					src="/src/resources/img/geriatra_juan.png"
-					class="w-115 h-115 absolute"
-					alt=""
-				/>
-			</div>
+			<div class="flex md:w-1/2 justify-center items-center relative">
+    <div class="bg-[#84b6f4]/70 md:w-75 md:h-75 w-60 h-60 rounded-full absolute z-0 mr-2.5">
+    </div>
+    <img
+        src="/src/resources/img/geriatra_juan.png"
+        class="md:w-115 md:h-115 w-95 h-95 object-contain z-10 relative"
+        alt="Geriatra Dr. Juan Andrés Jambo Mendoza"
+    />
+</div>
 		</div>
 	</section>
 	<Conocesection />

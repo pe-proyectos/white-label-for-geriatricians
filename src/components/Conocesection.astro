@@ -12,38 +12,38 @@ const caracteristicas_linea2 = [
 ---
 
 <section id="Perfil">
-    <div class="px-19 py-10">
+    <div class="px-5 md:px-19 py-10">
         <div class="justify-items-center mb-10">
-            <h3 class="text-[2.15rem] font-bold text-gray-800 mb-2.5">
+            <h3 class="text-[1.8rem] md:text-[2.15rem] font-bold text-gray-800 mb-2.5">
                 Conoce a Tu <span class="text-[#84b6f4]">Geriatra</span>
             </h3>
             <div class="border-b-4 w-20 border-[#84b6f4]"></div>
         </div>
-        <div class="flex gap-10">
-            <div class="flex w-1/2 gap-2 items-center">
+        <div class="flex flex-col-reverse md:flex-row gap-10">
+            <div class="flex md:w-1/2 gap-2 items-center">
                 <div class="flex w-1/2">
                     <img
                         src="/src/resources/img/drjuan_1.jpg"
                         class="object-cover w-full h-120 rounded-s-2xl"
-                        alt=""
+                        alt="Paciente del Geriatra"
                     />
                 </div>
                 <div class="flex flex-col w-1/2 gap-2">
                     <img
                         src="/src/resources/img/drjuan_2.jpg"
                         class="object-cover w-full h-59 rounded-se-2xl"
-                        alt=""
+                        alt="Paciente del Geriatra"
                     />
                     <img
                         src="/src/resources/img/drjuan_3.jpg"
                         class="object-cover w-full h-59 object-top rounded-ee-2xl"
-                        alt=""
+                        alt="Paciente del Geriatra"
                     />
                     
                 </div>
             </div>
-            <div class="flex flex-col w-1/2 px-8 py-6 bg-gray-50 rounded-2xl">
-                <h4 class="text-[1.65rem] font-bold text-gray-800">
+            <div class="flex flex-col md:w-1/2 px-8 py-6 bg-gray-50 rounded-2xl">
+                <h4 class="text-[1.3rem] md:text-[1.65rem] font-bold text-gray-800">
                     Dr. Juan Andrés Jambo Mendoza
                 </h4>
                 <div class="flex gap-3 mt-1 mb-4">
@@ -63,7 +63,7 @@ const caracteristicas_linea2 = [
                         RNE: 046847
                     </p>
                 </div>
-                <p class="text-gray-700">
+                <p class="text-gray-700 text-[0.9rem] md:text-base">
                     Con más de una década dedicado al cuidado del adulto mayor,
                     el Dr. Jambo transforma la experiencia médica en un
                     acompañamiento integral para el bienestar. Formado en la
@@ -74,11 +74,11 @@ const caracteristicas_linea2 = [
                     calidad de vida y fortalecer la confianza de sus pacientes
                     para disfrutar plenamente esta etapa de la vida.
                 </p>
-                <p class="text-[#84b6f4]/95 font-bold text-xl mt-5 mb-3">
+                <p class="text-[#84b6f4]/95 font-bold md:text-xl text-lg mt-5 mb-3">
                     Especialidades
                 </p>
                 <div class="flex">
-                    <ul class="flex flex-col w-1/2 list-inside text-gray-700">
+                    <ul class="flex flex-col w-1/2 list-inside text-gray-700 text-[0.9rem] md:text-base">
                         {
                             caracteristicas_linea1.map(
                                 (caracteristica: string) => (
@@ -90,7 +90,7 @@ const caracteristicas_linea2 = [
                             )
                         }
                     </ul>
-                    <ul class="flex flex-col w-1/2 list-inside text-gray-700">
+                    <ul class="flex flex-col w-1/2 list-inside text-gray-700 text-[0.9rem] md:text-base">
                         {
                             caracteristicas_linea2.map(
                                 (caracteristica: string) => (
@@ -104,9 +104,9 @@ const caracteristicas_linea2 = [
                     </ul>
                 </div>
                 <div class="flex text-white font-medium gap-4 mt-5">
-                    <a href="#form" class="flex px-6 py-3 bg-[#84b6f4]/95 rounded-full gap-2 cursor-pointer transition delay-150 duration-300 ease-in-out hover:-translate-y-1 hover:scale-100"
+                    <a href="#form" class="md:text-base text-[0.9rem] flex md:px-6 px-5 md:py-3 py-2.5 bg-[#84b6f4]/95 rounded-full gap-2 cursor-pointer transition delay-150 duration-300 ease-in-out hover:-translate-y-1 hover:scale-100"
                         >Solicitar Cita <svg
-                            class="w-6 h-6"
+                            class="md:w-6 md:h-6 w-5 h-5"
                             aria-hidden="true"
                             xmlns="http://www.w3.org/2000/svg"
                             width="24"
@@ -122,7 +122,7 @@ const caracteristicas_linea2 = [
                                 d="M19 12H5m14 0-4 4m4-4-4-4"></path>
                         </svg>
                     </a>
-                    <a href="cv" class="text-[#84b6f4]/95 border-2 border-[#84b6f4]/95 rounded-full py-2 px-6 cursor-pointer transition delay-150 duration-300 ease-in-out hover:-translate-y-1 hover:scale-100">Ver CV Completo</a>
+                    <a href="cv" class="md:text-base text-[0.9rem] text-[#84b6f4]/95 border-2 border-[#84b6f4]/95 rounded-full md:px-6 px-5 md:py-2 py-2.5 cursor-pointer transition delay-150 duration-300 ease-in-out hover:-translate-y-1 hover:scale-100">Ver CV Completo</a>
                 </div>
             </div>
         </div>
