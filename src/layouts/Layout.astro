@@ -43,15 +43,6 @@ import Navbar from "../components/Navbar.astro";
 			body.loaded {
 				opacity: 1;
 			}
-			
-			/* Prevent flash of unstyled content */
-			* {
-				visibility: hidden;
-			}
-			
-			body.loaded * {
-				visibility: visible;
-			}
 		</style>
 		<link
 			rel="stylesheet"
@@ -77,6 +68,13 @@ import Navbar from "../components/Navbar.astro";
 			// Show content after 200ms to prevent FOUC
 			setTimeout(() => {
 				document.body.classList.add('loaded');
+				
+				// Ensure map is properly sized after content loads
+				setTimeout(() => {
+					if (window.mapita) {
+						window.mapita.invalidateSize();
+					}
+				}, 100);
 			}, 200);
 		</script>
 	</body>

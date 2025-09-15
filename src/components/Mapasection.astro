@@ -265,28 +265,28 @@ import Cardclinicas from "./Cardclinicas.astro";
         const coor_inicial = [-5.684192418798546, -78.66426492419724];
         const zoom_inicial = 10;
         // @ts-ignore
-        var mapita = L.map("map").setView(coor_inicial, zoom_inicial);
+        window.mapita = L.map("map").setView(coor_inicial, zoom_inicial);
         // @ts-ignore
         L.tileLayer("https://tile.openstreetmap.org/{z}/{x}/{y}.png", {
             minZoom: 6,
             maxZoom: 19,
             attribution:
                 '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>',
-        }).addTo(mapita);
+        }).addTo(window.mapita);
         // @ts-ignore
-        L.control.scale().addTo(mapita);
+        L.control.scale().addTo(window.mapita);
 
         clinicas.map((u) => {
             // @ts-ignore
             let marker = L.marker([u.x, u.y], { draggable: false }).addTo(
-                mapita,
+                window.mapita,
             );
             marker.bindPopup(u.name);
         });
 
         let centrar = document.querySelector("#reiniciarmapa");
         centrar?.addEventListener("click", () => {
-            mapita.setView(coor_inicial, zoom_inicial);
+            window.mapita.setView(coor_inicial, zoom_inicial);
         });
 
         const botones = document.querySelectorAll(".btn-clinica");
@@ -329,11 +329,11 @@ import Cardclinicas from "./Cardclinicas.astro";
                     const ubi_user=[p.coords.latitude, p.coords.longitude];
                         // @ts-ignore
                         L.marker(ubi_user)
-                            .addTo(mapita)
+                            .addTo(window.mapita)
                             .bindPopup("📍 Estás aquí")
                             .openPopup();
 
-                        mapita.fitBounds([ubi_user, coor_inicial])
+                        window.mapita.fitBounds([ubi_user, coor_inicial])
                     }
               ),
             );
