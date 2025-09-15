@@ -5,7 +5,9 @@ import Cardclinicas from "./Cardclinicas.astro";
 <section id="Ubicacion">
     <div class="px-10 md:px-19 py-10">
         <div class="justify-items-center mb-10">
-            <h3 class="text-[1.8rem] md:text-[2.15rem] font-bold text-gray-800 mb-2.5">
+            <h3
+                class="text-[1.8rem] md:text-[2.15rem] font-bold text-gray-800 mb-2.5"
+            >
                 Centros de <span class="text-[#84b6f4]">Consulta</span>
             </h3>
             <div class="border-b-4 w-20 border-[#84b6f4]"></div>
@@ -105,50 +107,62 @@ import Cardclinicas from "./Cardclinicas.astro";
                                 <Cardclinicas
                                     name="Clínica de la Solidaridad"
                                     address="Calle Garcilazo de la Vega N° 415 - Jaén"
+                                    number="+51 965 065 550"
                                 />
                                 <Cardclinicas
                                     name="Clínica San Juan"
                                     address="Calle Túpac Amaru N° 695 - Jaén"
+                                    number="+51 956 143 256"
                                 />
                                 <Cardclinicas
                                     name="Centro Médico San Nicolas"
                                     address="Calle Alfredo Bastos N° 246"
+                                    number="+51 941 357 857"
                                 />
                                 <Cardclinicas
                                     name="Clínica Quiruclinic"
                                     address="Calle San Martín N° 1641"
+                                    number="+51 926 185 477"
                                 />
                                 <Cardclinicas
                                     name="Neuromedic Jaén"
                                     address="Calle Ecología N°111 Urb Gran Marañón Altura Puente Pakamuros"
+                                    number="+51 978 516 870 / +51 974 688 831"
                                 />
                                 <Cardclinicas
                                     name="Cadilab"
                                     address="Calle Pardo Miguel N° 270"
+                                    number="+51 924 516 612"
                                 />
                                 <Cardclinicas
                                     name="Cadilab"
                                     address="Av Pakamuros N° 1212"
+                                    number="+51 924 516 612"
                                 />
                                 <Cardclinicas
                                     name="Lab Norberth Winnner Jaén"
                                     address="Calle Los Lirios 170"
+                                    number="+51 969 568 243"
                                 />
                                 <Cardclinicas
                                     name="Clínica Ebenezer"
-                                    address="Calle Garcilazo de la Vega N° 407 "
+                                    address="Calle Garcilazo de la Vega N° 407"
+                                    number="+51 989 401 537"
                                 />
                                 <Cardclinicas
                                     name="Clínica Belen"
                                     address="Calle Huamantanga N° 999"
+                                    number="+51 915 083 558"
                                 />
                                 <Cardclinicas
                                     name="Clínica Ángel"
                                     address="Calle Zarumilla 1316"
+                                    number="+51 944 464 289 / +51 992 724 621"
                                 />
                                 <Cardclinicas
                                     name="Clínica Alienta"
                                     address="Prolongación Raymondi N° 103"
+                                    number="+51 962 802 139"
                                 />
                             </div>
                         </div>
@@ -209,18 +223,22 @@ import Cardclinicas from "./Cardclinicas.astro";
                                 <Cardclinicas
                                     name="Clínica Interamericana"
                                     address="Av. Héroes del Cenepa N1795"
+                                    number="+51 992 484 913"
                                 />
                                 <Cardclinicas
                                     name="Clínica Pediatric Kids y Especialidades"
                                     address="Jr. La Verdad N°628"
+                                    number="+51 930 975 694"
                                 />
                                 <Cardclinicas
                                     name="Clínica Montecarlo"
                                     address="Jr. Comercio N° 576 Bagua"
+                                    number="+51 956 542 166"
                                 />
                                 <Cardclinicas
                                     name="Cadilab"
                                     address="Calle Sargento Lores N°569"
+                                    number="+51 931 526 349 "
                                 />
                             </div>
                         </div>
@@ -321,21 +339,17 @@ import Cardclinicas from "./Cardclinicas.astro";
             });
         });
 
-        document
-            .querySelector("#centrarmapa")
-            ?.addEventListener("click", () =>
-                navigator.geolocation.getCurrentPosition(
-                    (p) =>{
-                    const ubi_user=[p.coords.latitude, p.coords.longitude];
-                        // @ts-ignore
-                        L.marker(ubi_user)
-                            .addTo(window.mapita)
-                            .bindPopup("📍 Estás aquí")
-                            .openPopup();
+        document.querySelector("#centrarmapa")?.addEventListener("click", () =>
+            navigator.geolocation.getCurrentPosition((p) => {
+                const ubi_user = [p.coords.latitude, p.coords.longitude];
+                // @ts-ignore
+                L.marker(ubi_user)
+                    .addTo(window.mapita)
+                    .bindPopup("📍 Estás aquí")
+                    .openPopup();
 
-                        window.mapita.fitBounds([ubi_user, coor_inicial])
-                    }
-              ),
-            );
+                window.mapita.fitBounds([ubi_user, coor_inicial]);
+            }),
+        );
     </script>
 </section>
