@@ -7,7 +7,7 @@ export default defineConfig({
     output: 'server',
     server: {
       host: true,
-      port: 4322,
+      port: 4325,
     },
     prefetch: false,
     adapter: bun(),
