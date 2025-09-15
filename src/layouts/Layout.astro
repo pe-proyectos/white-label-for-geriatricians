@@ -25,7 +25,7 @@ import Navbar from "../components/Navbar.astro";
 			property="og:description"
 			content="Dr. Juan Andrés Jambo Mendoza - Geriatra Especialista en Jaén y Bagua. Experto en salud y bienestar del adulto mayor. Atención médica integral, personalizada y de calidad para un envejecimiento saludable y pleno. Consultas especializadas en geriatría."
 		/>
-		<meta property="og:image" content="/src/resources/img/drjuan_3.jpg" />
+		<meta property="og:image" content="/img/drjuan_3.jpg" />
 		<meta property="og:type" content="website" />
 		<meta property="og:url" content="https://geriatrajuanjambo.com" />
 		<link rel="icon" type="image/png" sizes="32x32" href="/img/favicon-32x32.png">
@@ -33,6 +33,26 @@ import Navbar from "../components/Navbar.astro";
 		<title>Dr. Juan Jambo Mendoza | Geriatra</title>
 		<script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"
 		></script>
+		<style>
+			/* Hide content until Tailwind loads */
+			body {
+				opacity: 0;
+				transition: opacity 1s ease-in-out;
+			}
+			
+			body.loaded {
+				opacity: 1;
+			}
+			
+			/* Prevent flash of unstyled content */
+			* {
+				visibility: hidden;
+			}
+			
+			body.loaded * {
+				visibility: visible;
+			}
+		</style>
 		<link
 			rel="stylesheet"
 			href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
@@ -52,5 +72,12 @@ import Navbar from "../components/Navbar.astro";
 			<slot />
 		</main>
 		<Footersection />
+		
+		<script>
+			// Show content after 200ms to prevent FOUC
+			setTimeout(() => {
+				document.body.classList.add('loaded');
+			}, 200);
+		</script>
 	</body>
 </html>
