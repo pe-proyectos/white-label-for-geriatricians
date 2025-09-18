@@ -290,13 +290,20 @@ import Cardclinicas from "./Cardclinicas.astro";
             maxZoom: 19,
             attribution:
                 '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>',
+                // @ts-ignore
         }).addTo(window.mapita);
         // @ts-ignore
         L.control.scale().addTo(window.mapita);
 
+        setTimeout(function () {
+            window.dispatchEvent(new Event("resize"));
+        }, 1000);
+        
+
         clinicas.map((u) => {
             // @ts-ignore
             let marker = L.marker([u.x, u.y], { draggable: false }).addTo(
+                // @ts-ignore
                 window.mapita,
             );
             marker.bindPopup(u.name);
@@ -304,6 +311,7 @@ import Cardclinicas from "./Cardclinicas.astro";
 
         let centrar = document.querySelector("#reiniciarmapa");
         centrar?.addEventListener("click", () => {
+            // @ts-ignore
             window.mapita.setView(coor_inicial, zoom_inicial);
         });
 
@@ -344,10 +352,11 @@ import Cardclinicas from "./Cardclinicas.astro";
                 const ubi_user = [p.coords.latitude, p.coords.longitude];
                 // @ts-ignore
                 L.marker(ubi_user)
+                // @ts-ignore
                     .addTo(window.mapita)
                     .bindPopup("📍 Estás aquí")
                     .openPopup();
-
+                // @ts-ignore
                 window.mapita.fitBounds([ubi_user, coor_inicial]);
             }),
         );
