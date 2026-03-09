@@ -30,6 +30,10 @@ import Navbar from "../components/Navbar.astro";
 		<meta property="og:url" content="https://geriatrajuanjambo.com" />
 		<link rel="icon" type="image/png" sizes="64x64" href="/img/favicon64.png">
 		<title>Dr. Juan Jambo Mendoza | Geriatra</title>
+		
+		<!-- Umami Analytics -->
+		<script defer src="https://umami.luminari.agency/script.js" data-website-id="PLACEHOLDER_GERIATRAJUANJAMBO"></script>
+		
 		<script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"
 		></script>
 		<style>
@@ -75,6 +79,73 @@ import Navbar from "../components/Navbar.astro";
 					}
 				}, 100);
 			}, 200);
+
+			// ═══════════════════════════════════════════════════
+			// UMAMI ANALYTICS - Event Tracking
+			// ═══════════════════════════════════════════════════
+			
+			// Helper function to track events (waits for umami to load)
+			function trackEvent(eventName) {
+				if (typeof window.umami !== 'undefined') {
+					window.umami.track(eventName);
+				}
+			}
+
+			// 1. Scroll to Contact Section
+			const contactSection = document.getElementById('contacto');
+			if (contactSection) {
+				const contactObserver = new IntersectionObserver((entries) => {
+					entries.forEach(entry => {
+						if (entry.isIntersecting) {
+							trackEvent('scroll_to_contact');
+							contactObserver.unobserve(entry.target);
+						}
+					});
+				}, { threshold: 0.3 });
+				contactObserver.observe(contactSection);
+			}
+
+			// 2. Click WhatsApp Buttons
+			document.addEventListener('click', function(e) {
+				const target = e.target.closest('a[href*="whatsapp"], button[id*="enviar"]');
+				if (target && (target.href?.includes('whatsapp') || target.id?.includes('enviar'))) {
+					trackEvent('click_whatsapp');
+				}
+			});
+
+			// 3. Click Call Buttons
+			document.addEventListener('click', function(e) {
+				const target = e.target.closest('a[href^="tel:"]');
+				if (target) {
+					trackEvent('click_call');
+				}
+			});
+
+			// 4. Form Start (onfocus on first field)
+			let formStarted = false;
+			const formInputs = document.querySelectorAll('#contacto input, #contacto select, #contacto textarea');
+			formInputs.forEach(input => {
+				input.addEventListener('focus', function() {
+					if (!formStarted) {
+						trackEvent('form_start');
+						formStarted = true;
+					}
+				}, { once: true });
+			});
+
+			// 5. Form Submit (on send button click)
+			const sendButton = document.getElementById('btn-enviar');
+			if (sendButton) {
+				sendButton.addEventListener('click', function(e) {
+					// Get form values to validate before tracking
+					const nombre = document.getElementById('inputNombre')?.value.trim();
+					const dni = document.getElementById('inputDni')?.value.trim();
+					const consulta = document.getElementById('consulta-select')?.value;
+					if (nombre && dni && consulta && consulta !== 'Selecciona una opción') {
+						trackEvent('form_submit');
+					}
+				});
+			}
 		</script>
 	</body>
 </html>
