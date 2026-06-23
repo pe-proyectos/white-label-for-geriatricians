@@ -5,6 +5,7 @@ import Formsection from "../components/Formsection.astro";
 import Mapasection from "../components/Mapasection.astro";
 import Conocesection from "../components/Conocesection.astro";
 import Sindromesseccion from "../components/Sindromesseccion.astro";
+import Recurrirsection from "../components/Recurrirsection.astro";
 
 // Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
 // Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
@@ -15,7 +16,7 @@ import Sindromesseccion from "../components/Sindromesseccion.astro";
 		<div class=" flex flex-col md:flex-row px-5  md:px-19 pt-26 py-10  ">
 			<div class="flex flex-col md:w-1/2 md:pr-35">
 				<h2 class="text-4xl md:text-6xl font-bold text-gray-800 pr-4 md:pr-0 ">
-					Cuidamos de  <span class=" text-[#84b6f4]">Quienes Más</span>
+					Cuidamos de  <span class=" text-[#4e93ed]">Quienes Más</span>
 					Amas
 				</h2>
 				<p class="md:text-xl text-gray-600 my-5">
@@ -25,7 +26,7 @@ import Sindromesseccion from "../components/Sindromesseccion.astro";
 				<div
 					class="flex flex-col bg-[#84b6f4]/15 py-3 px-5 rounded-md mb-5"
 				>
-					<p class="flex text-[#84b6f4] gap-2 font-medium">
+					<p class="flex text-[#4e93ed] gap-2 font-medium">
 						<svg
 							class="w-6 h-6"
 							aria-hidden="true"
@@ -57,21 +58,23 @@ import Sindromesseccion from "../components/Sindromesseccion.astro";
 				</div>
 				<a
 					href="#form"
-					class="bg-[#84b6f4] hover:bg-[#67a4f0] : rounded-full text-white py-2.5 px-6 w-fit cursor-pointer"
+					class="bg-[#4e93ed] hover:bg-[#548fd6] : rounded-full text-white py-2.5 px-6 w-fit cursor-pointer"
 					>Solicitar Consulta Geriátrica</a
 				>
 			</div>
-			<div class="flex md:w-1/2 justify-center items-center relative">
-    <div class="bg-[#84b6f4]/70 md:w-75 md:h-75 w-60 h-60 rounded-full absolute z-0 mr-2.5">
-    </div>
+			<div class="flex md:w-1/2 justify-center items-center relative py-8 md:py-0">
+    <!-- Gradient background -->
+    <div class="absolute top-0 right-0 w-96 h-full bg-gradient-to-b from-[#4e93ed]/40 to-transparent rounded-full blur-3xl"></div>
+    <!-- Image with frame effect -->
     <img
-        src="/img/geriatra_juan.png"
-        class="md:w-115 md:h-115 w-95 h-95 object-contain z-10 relative"
+        src="/img/geriatra_juan.jpg"
+        class="md:w-72 md:h-full w-64 h-96 object-contain rounded-3xl shadow-2xl relative z-10"
         alt="Geriatra Dr. Juan Andrés Jambo Mendoza"
     />
 </div>
 		</div>
 	</section>
+	<Recurrirsection/>
 	<Conocesection />
 	<Mapasection />
 	<Sindromesseccion />
